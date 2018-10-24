@@ -2324,6 +2324,19 @@ minimal_controller/fast:
 .PHONY : minimal_controller/fast
 
 #=============================================================================
+# Target rules for targets named sin_commander
+
+# Build rule for target.
+sin_commander: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander
+.PHONY : sin_commander
+
+# fast build rule for target.
+sin_commander/fast:
+	$(MAKE) -f Part_1/minimal_nodes/CMakeFiles/sin_commander.dir/build.make Part_1/minimal_nodes/CMakeFiles/sin_commander.dir/build
+.PHONY : sin_commander/fast
+
+#=============================================================================
 # Target rules for targets named mobot_gazebo_state_package
 
 # Build rule for target.
@@ -2426,6 +2439,201 @@ mobot_urdf_package: cmake_check_build_system
 mobot_urdf_package/fast:
 	$(MAKE) -f Part_2/mobot_urdf/CMakeFiles/mobot_urdf_package.dir/build.make Part_2/mobot_urdf/CMakeFiles/mobot_urdf_package.dir/build
 .PHONY : mobot_urdf_package/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_client
+
+# Build rule for target.
+sin_commander_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_client
+.PHONY : sin_commander_client
+
+# fast build rule for target.
+sin_commander_client/fast:
+	$(MAKE) -f Part_1/sin_commander_service/CMakeFiles/sin_commander_client.dir/build.make Part_1/sin_commander_service/CMakeFiles/sin_commander_client.dir/build
+.PHONY : sin_commander_client/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_service
+
+# Build rule for target.
+sin_commander_service: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_service
+.PHONY : sin_commander_service
+
+# fast build rule for target.
+sin_commander_service/fast:
+	$(MAKE) -f Part_1/sin_commander_service/CMakeFiles/sin_commander_service.dir/build.make Part_1/sin_commander_service/CMakeFiles/sin_commander_service.dir/build
+.PHONY : sin_commander_service/fast
+
+#=============================================================================
+# Target rules for targets named _sin_commander_service_generate_messages_check_deps_SinCommanderMsg
+
+# Build rule for target.
+_sin_commander_service_generate_messages_check_deps_SinCommanderMsg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _sin_commander_service_generate_messages_check_deps_SinCommanderMsg
+.PHONY : _sin_commander_service_generate_messages_check_deps_SinCommanderMsg
+
+# fast build rule for target.
+_sin_commander_service_generate_messages_check_deps_SinCommanderMsg/fast:
+	$(MAKE) -f Part_1/sin_commander_service/CMakeFiles/_sin_commander_service_generate_messages_check_deps_SinCommanderMsg.dir/build.make Part_1/sin_commander_service/CMakeFiles/_sin_commander_service_generate_messages_check_deps_SinCommanderMsg.dir/build
+.PHONY : _sin_commander_service_generate_messages_check_deps_SinCommanderMsg/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_service_generate_messages_eus
+
+# Build rule for target.
+sin_commander_service_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_service_generate_messages_eus
+.PHONY : sin_commander_service_generate_messages_eus
+
+# fast build rule for target.
+sin_commander_service_generate_messages_eus/fast:
+	$(MAKE) -f Part_1/sin_commander_service/CMakeFiles/sin_commander_service_generate_messages_eus.dir/build.make Part_1/sin_commander_service/CMakeFiles/sin_commander_service_generate_messages_eus.dir/build
+.PHONY : sin_commander_service_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_service_genpy
+
+# Build rule for target.
+sin_commander_service_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_service_genpy
+.PHONY : sin_commander_service_genpy
+
+# fast build rule for target.
+sin_commander_service_genpy/fast:
+	$(MAKE) -f Part_1/sin_commander_service/CMakeFiles/sin_commander_service_genpy.dir/build.make Part_1/sin_commander_service/CMakeFiles/sin_commander_service_genpy.dir/build
+.PHONY : sin_commander_service_genpy/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_service_generate_messages_nodejs
+
+# Build rule for target.
+sin_commander_service_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_service_generate_messages_nodejs
+.PHONY : sin_commander_service_generate_messages_nodejs
+
+# fast build rule for target.
+sin_commander_service_generate_messages_nodejs/fast:
+	$(MAKE) -f Part_1/sin_commander_service/CMakeFiles/sin_commander_service_generate_messages_nodejs.dir/build.make Part_1/sin_commander_service/CMakeFiles/sin_commander_service_generate_messages_nodejs.dir/build
+.PHONY : sin_commander_service_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_service_gennodejs
+
+# Build rule for target.
+sin_commander_service_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_service_gennodejs
+.PHONY : sin_commander_service_gennodejs
+
+# fast build rule for target.
+sin_commander_service_gennodejs/fast:
+	$(MAKE) -f Part_1/sin_commander_service/CMakeFiles/sin_commander_service_gennodejs.dir/build.make Part_1/sin_commander_service/CMakeFiles/sin_commander_service_gennodejs.dir/build
+.PHONY : sin_commander_service_gennodejs/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_service_generate_messages_cpp
+
+# Build rule for target.
+sin_commander_service_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_service_generate_messages_cpp
+.PHONY : sin_commander_service_generate_messages_cpp
+
+# fast build rule for target.
+sin_commander_service_generate_messages_cpp/fast:
+	$(MAKE) -f Part_1/sin_commander_service/CMakeFiles/sin_commander_service_generate_messages_cpp.dir/build.make Part_1/sin_commander_service/CMakeFiles/sin_commander_service_generate_messages_cpp.dir/build
+.PHONY : sin_commander_service_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_service_generate_messages_py
+
+# Build rule for target.
+sin_commander_service_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_service_generate_messages_py
+.PHONY : sin_commander_service_generate_messages_py
+
+# fast build rule for target.
+sin_commander_service_generate_messages_py/fast:
+	$(MAKE) -f Part_1/sin_commander_service/CMakeFiles/sin_commander_service_generate_messages_py.dir/build.make Part_1/sin_commander_service/CMakeFiles/sin_commander_service_generate_messages_py.dir/build
+.PHONY : sin_commander_service_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_service_package
+
+# Build rule for target.
+sin_commander_service_package: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_service_package
+.PHONY : sin_commander_service_package
+
+# fast build rule for target.
+sin_commander_service_package/fast:
+	$(MAKE) -f Part_1/sin_commander_service/CMakeFiles/sin_commander_service_package.dir/build.make Part_1/sin_commander_service/CMakeFiles/sin_commander_service_package.dir/build
+.PHONY : sin_commander_service_package/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_service_gencpp
+
+# Build rule for target.
+sin_commander_service_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_service_gencpp
+.PHONY : sin_commander_service_gencpp
+
+# fast build rule for target.
+sin_commander_service_gencpp/fast:
+	$(MAKE) -f Part_1/sin_commander_service/CMakeFiles/sin_commander_service_gencpp.dir/build.make Part_1/sin_commander_service/CMakeFiles/sin_commander_service_gencpp.dir/build
+.PHONY : sin_commander_service_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_service_geneus
+
+# Build rule for target.
+sin_commander_service_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_service_geneus
+.PHONY : sin_commander_service_geneus
+
+# fast build rule for target.
+sin_commander_service_geneus/fast:
+	$(MAKE) -f Part_1/sin_commander_service/CMakeFiles/sin_commander_service_geneus.dir/build.make Part_1/sin_commander_service/CMakeFiles/sin_commander_service_geneus.dir/build
+.PHONY : sin_commander_service_geneus/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_service_generate_messages_lisp
+
+# Build rule for target.
+sin_commander_service_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_service_generate_messages_lisp
+.PHONY : sin_commander_service_generate_messages_lisp
+
+# fast build rule for target.
+sin_commander_service_generate_messages_lisp/fast:
+	$(MAKE) -f Part_1/sin_commander_service/CMakeFiles/sin_commander_service_generate_messages_lisp.dir/build.make Part_1/sin_commander_service/CMakeFiles/sin_commander_service_generate_messages_lisp.dir/build
+.PHONY : sin_commander_service_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_service_generate_messages
+
+# Build rule for target.
+sin_commander_service_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_service_generate_messages
+.PHONY : sin_commander_service_generate_messages
+
+# fast build rule for target.
+sin_commander_service_generate_messages/fast:
+	$(MAKE) -f Part_1/sin_commander_service/CMakeFiles/sin_commander_service_generate_messages.dir/build.make Part_1/sin_commander_service/CMakeFiles/sin_commander_service_generate_messages.dir/build
+.PHONY : sin_commander_service_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_service_genlisp
+
+# Build rule for target.
+sin_commander_service_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_service_genlisp
+.PHONY : sin_commander_service_genlisp
+
+# fast build rule for target.
+sin_commander_service_genlisp/fast:
+	$(MAKE) -f Part_1/sin_commander_service/CMakeFiles/sin_commander_service_genlisp.dir/build.make Part_1/sin_commander_service/CMakeFiles/sin_commander_service_genlisp.dir/build
+.PHONY : sin_commander_service_genlisp/fast
 
 #=============================================================================
 # Target rules for targets named stdr_control_package
@@ -6172,6 +6380,19 @@ irb120_ctl_interface/fast:
 .PHONY : irb120_ctl_interface/fast
 
 #=============================================================================
+# Target rules for targets named traj_joint_space_control
+
+# Build rule for target.
+traj_joint_space_control: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 traj_joint_space_control
+.PHONY : traj_joint_space_control
+
+# fast build rule for target.
+traj_joint_space_control/fast:
+	$(MAKE) -f Part_5/irb120/irb120_ctl_interface/CMakeFiles/traj_joint_space_control.dir/build.make Part_5/irb120/irb120_ctl_interface/CMakeFiles/traj_joint_space_control.dir/build
+.PHONY : traj_joint_space_control/fast
+
+#=============================================================================
 # Target rules for targets named irb120_ctl_interface_package
 
 # Build rule for target.
@@ -6443,6 +6664,279 @@ baxter_gripper_lib_test_main: cmake_check_build_system
 baxter_gripper_lib_test_main/fast:
 	$(MAKE) -f Part_5/baxter/simple_baxter_gripper_interface/CMakeFiles/baxter_gripper_lib_test_main.dir/build.make Part_5/baxter/simple_baxter_gripper_interface/CMakeFiles/baxter_gripper_lib_test_main.dir/build
 .PHONY : baxter_gripper_lib_test_main/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_action_server_generate_messages_cpp
+
+# Build rule for target.
+sin_commander_action_server_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_action_server_generate_messages_cpp
+.PHONY : sin_commander_action_server_generate_messages_cpp
+
+# fast build rule for target.
+sin_commander_action_server_generate_messages_cpp/fast:
+	$(MAKE) -f Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server_generate_messages_cpp.dir/build.make Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server_generate_messages_cpp.dir/build
+.PHONY : sin_commander_action_server_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named _sin_commander_action_server_generate_messages_check_deps_sinGoal
+
+# Build rule for target.
+_sin_commander_action_server_generate_messages_check_deps_sinGoal: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _sin_commander_action_server_generate_messages_check_deps_sinGoal
+.PHONY : _sin_commander_action_server_generate_messages_check_deps_sinGoal
+
+# fast build rule for target.
+_sin_commander_action_server_generate_messages_check_deps_sinGoal/fast:
+	$(MAKE) -f Part_1/sin_commander_action_server/CMakeFiles/_sin_commander_action_server_generate_messages_check_deps_sinGoal.dir/build.make Part_1/sin_commander_action_server/CMakeFiles/_sin_commander_action_server_generate_messages_check_deps_sinGoal.dir/build
+.PHONY : _sin_commander_action_server_generate_messages_check_deps_sinGoal/fast
+
+#=============================================================================
+# Target rules for targets named _sin_commander_action_server_generate_messages_check_deps_sinAction
+
+# Build rule for target.
+_sin_commander_action_server_generate_messages_check_deps_sinAction: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _sin_commander_action_server_generate_messages_check_deps_sinAction
+.PHONY : _sin_commander_action_server_generate_messages_check_deps_sinAction
+
+# fast build rule for target.
+_sin_commander_action_server_generate_messages_check_deps_sinAction/fast:
+	$(MAKE) -f Part_1/sin_commander_action_server/CMakeFiles/_sin_commander_action_server_generate_messages_check_deps_sinAction.dir/build.make Part_1/sin_commander_action_server/CMakeFiles/_sin_commander_action_server_generate_messages_check_deps_sinAction.dir/build
+.PHONY : _sin_commander_action_server_generate_messages_check_deps_sinAction/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_action_server_gennodejs
+
+# Build rule for target.
+sin_commander_action_server_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_action_server_gennodejs
+.PHONY : sin_commander_action_server_gennodejs
+
+# fast build rule for target.
+sin_commander_action_server_gennodejs/fast:
+	$(MAKE) -f Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server_gennodejs.dir/build.make Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server_gennodejs.dir/build
+.PHONY : sin_commander_action_server_gennodejs/fast
+
+#=============================================================================
+# Target rules for targets named _sin_commander_action_server_generate_messages_check_deps_sinResult
+
+# Build rule for target.
+_sin_commander_action_server_generate_messages_check_deps_sinResult: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _sin_commander_action_server_generate_messages_check_deps_sinResult
+.PHONY : _sin_commander_action_server_generate_messages_check_deps_sinResult
+
+# fast build rule for target.
+_sin_commander_action_server_generate_messages_check_deps_sinResult/fast:
+	$(MAKE) -f Part_1/sin_commander_action_server/CMakeFiles/_sin_commander_action_server_generate_messages_check_deps_sinResult.dir/build.make Part_1/sin_commander_action_server/CMakeFiles/_sin_commander_action_server_generate_messages_check_deps_sinResult.dir/build
+.PHONY : _sin_commander_action_server_generate_messages_check_deps_sinResult/fast
+
+#=============================================================================
+# Target rules for targets named _sin_commander_action_server_generate_messages_check_deps_sinActionGoal
+
+# Build rule for target.
+_sin_commander_action_server_generate_messages_check_deps_sinActionGoal: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _sin_commander_action_server_generate_messages_check_deps_sinActionGoal
+.PHONY : _sin_commander_action_server_generate_messages_check_deps_sinActionGoal
+
+# fast build rule for target.
+_sin_commander_action_server_generate_messages_check_deps_sinActionGoal/fast:
+	$(MAKE) -f Part_1/sin_commander_action_server/CMakeFiles/_sin_commander_action_server_generate_messages_check_deps_sinActionGoal.dir/build.make Part_1/sin_commander_action_server/CMakeFiles/_sin_commander_action_server_generate_messages_check_deps_sinActionGoal.dir/build
+.PHONY : _sin_commander_action_server_generate_messages_check_deps_sinActionGoal/fast
+
+#=============================================================================
+# Target rules for targets named _sin_commander_action_server_generate_messages_check_deps_sinActionFeedback
+
+# Build rule for target.
+_sin_commander_action_server_generate_messages_check_deps_sinActionFeedback: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _sin_commander_action_server_generate_messages_check_deps_sinActionFeedback
+.PHONY : _sin_commander_action_server_generate_messages_check_deps_sinActionFeedback
+
+# fast build rule for target.
+_sin_commander_action_server_generate_messages_check_deps_sinActionFeedback/fast:
+	$(MAKE) -f Part_1/sin_commander_action_server/CMakeFiles/_sin_commander_action_server_generate_messages_check_deps_sinActionFeedback.dir/build.make Part_1/sin_commander_action_server/CMakeFiles/_sin_commander_action_server_generate_messages_check_deps_sinActionFeedback.dir/build
+.PHONY : _sin_commander_action_server_generate_messages_check_deps_sinActionFeedback/fast
+
+#=============================================================================
+# Target rules for targets named _sin_commander_action_server_generate_messages_check_deps_sinFeedback
+
+# Build rule for target.
+_sin_commander_action_server_generate_messages_check_deps_sinFeedback: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _sin_commander_action_server_generate_messages_check_deps_sinFeedback
+.PHONY : _sin_commander_action_server_generate_messages_check_deps_sinFeedback
+
+# fast build rule for target.
+_sin_commander_action_server_generate_messages_check_deps_sinFeedback/fast:
+	$(MAKE) -f Part_1/sin_commander_action_server/CMakeFiles/_sin_commander_action_server_generate_messages_check_deps_sinFeedback.dir/build.make Part_1/sin_commander_action_server/CMakeFiles/_sin_commander_action_server_generate_messages_check_deps_sinFeedback.dir/build
+.PHONY : _sin_commander_action_server_generate_messages_check_deps_sinFeedback/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_action_server_generate_messages_eus
+
+# Build rule for target.
+sin_commander_action_server_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_action_server_generate_messages_eus
+.PHONY : sin_commander_action_server_generate_messages_eus
+
+# fast build rule for target.
+sin_commander_action_server_generate_messages_eus/fast:
+	$(MAKE) -f Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server_generate_messages_eus.dir/build.make Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server_generate_messages_eus.dir/build
+.PHONY : sin_commander_action_server_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_action_server_genlisp
+
+# Build rule for target.
+sin_commander_action_server_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_action_server_genlisp
+.PHONY : sin_commander_action_server_genlisp
+
+# fast build rule for target.
+sin_commander_action_server_genlisp/fast:
+	$(MAKE) -f Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server_genlisp.dir/build.make Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server_genlisp.dir/build
+.PHONY : sin_commander_action_server_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named _sin_commander_action_server_generate_messages_check_deps_sinActionResult
+
+# Build rule for target.
+_sin_commander_action_server_generate_messages_check_deps_sinActionResult: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _sin_commander_action_server_generate_messages_check_deps_sinActionResult
+.PHONY : _sin_commander_action_server_generate_messages_check_deps_sinActionResult
+
+# fast build rule for target.
+_sin_commander_action_server_generate_messages_check_deps_sinActionResult/fast:
+	$(MAKE) -f Part_1/sin_commander_action_server/CMakeFiles/_sin_commander_action_server_generate_messages_check_deps_sinActionResult.dir/build.make Part_1/sin_commander_action_server/CMakeFiles/_sin_commander_action_server_generate_messages_check_deps_sinActionResult.dir/build
+.PHONY : _sin_commander_action_server_generate_messages_check_deps_sinActionResult/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_action_server_gencpp
+
+# Build rule for target.
+sin_commander_action_server_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_action_server_gencpp
+.PHONY : sin_commander_action_server_gencpp
+
+# fast build rule for target.
+sin_commander_action_server_gencpp/fast:
+	$(MAKE) -f Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server_gencpp.dir/build.make Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server_gencpp.dir/build
+.PHONY : sin_commander_action_server_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_action_server_generate_messages
+
+# Build rule for target.
+sin_commander_action_server_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_action_server_generate_messages
+.PHONY : sin_commander_action_server_generate_messages
+
+# fast build rule for target.
+sin_commander_action_server_generate_messages/fast:
+	$(MAKE) -f Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server_generate_messages.dir/build.make Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server_generate_messages.dir/build
+.PHONY : sin_commander_action_server_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_action_server_geneus
+
+# Build rule for target.
+sin_commander_action_server_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_action_server_geneus
+.PHONY : sin_commander_action_server_geneus
+
+# fast build rule for target.
+sin_commander_action_server_geneus/fast:
+	$(MAKE) -f Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server_geneus.dir/build.make Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server_geneus.dir/build
+.PHONY : sin_commander_action_server_geneus/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_action_server
+
+# Build rule for target.
+sin_commander_action_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_action_server
+.PHONY : sin_commander_action_server
+
+# fast build rule for target.
+sin_commander_action_server/fast:
+	$(MAKE) -f Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server.dir/build.make Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server.dir/build
+.PHONY : sin_commander_action_server/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_action_server_package
+
+# Build rule for target.
+sin_commander_action_server_package: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_action_server_package
+.PHONY : sin_commander_action_server_package
+
+# fast build rule for target.
+sin_commander_action_server_package/fast:
+	$(MAKE) -f Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server_package.dir/build.make Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server_package.dir/build
+.PHONY : sin_commander_action_server_package/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_action_server_generate_messages_lisp
+
+# Build rule for target.
+sin_commander_action_server_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_action_server_generate_messages_lisp
+.PHONY : sin_commander_action_server_generate_messages_lisp
+
+# fast build rule for target.
+sin_commander_action_server_generate_messages_lisp/fast:
+	$(MAKE) -f Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server_generate_messages_lisp.dir/build.make Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server_generate_messages_lisp.dir/build
+.PHONY : sin_commander_action_server_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_action_server_generate_messages_nodejs
+
+# Build rule for target.
+sin_commander_action_server_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_action_server_generate_messages_nodejs
+.PHONY : sin_commander_action_server_generate_messages_nodejs
+
+# fast build rule for target.
+sin_commander_action_server_generate_messages_nodejs/fast:
+	$(MAKE) -f Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server_generate_messages_nodejs.dir/build.make Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server_generate_messages_nodejs.dir/build
+.PHONY : sin_commander_action_server_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_action_server_generate_messages_py
+
+# Build rule for target.
+sin_commander_action_server_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_action_server_generate_messages_py
+.PHONY : sin_commander_action_server_generate_messages_py
+
+# fast build rule for target.
+sin_commander_action_server_generate_messages_py/fast:
+	$(MAKE) -f Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server_generate_messages_py.dir/build.make Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server_generate_messages_py.dir/build
+.PHONY : sin_commander_action_server_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_action_server_genpy
+
+# Build rule for target.
+sin_commander_action_server_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_action_server_genpy
+.PHONY : sin_commander_action_server_genpy
+
+# fast build rule for target.
+sin_commander_action_server_genpy/fast:
+	$(MAKE) -f Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server_genpy.dir/build.make Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_server_genpy.dir/build
+.PHONY : sin_commander_action_server_genpy/fast
+
+#=============================================================================
+# Target rules for targets named sin_commander_action_client
+
+# Build rule for target.
+sin_commander_action_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sin_commander_action_client
+.PHONY : sin_commander_action_client
+
+# fast build rule for target.
+sin_commander_action_client/fast:
+	$(MAKE) -f Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_client.dir/build.make Part_1/sin_commander_action_server/CMakeFiles/sin_commander_action_client.dir/build
+.PHONY : sin_commander_action_client/fast
 
 #=============================================================================
 # Target rules for targets named sine_commander_package
@@ -12590,6 +13084,7 @@ help:
 	@echo "... sleepy_minimal_publisher"
 	@echo "... minimal_publisher"
 	@echo "... minimal_controller"
+	@echo "... sin_commander"
 	@echo "... mobot_gazebo_state_package"
 	@echo "... mobot_gazebo_state"
 	@echo "... mobot_gazebo_state2"
@@ -12598,6 +13093,21 @@ help:
 	@echo "... mobot_nl_steering_package"
 	@echo "... mobot_nl_steering"
 	@echo "... mobot_urdf_package"
+	@echo "... sin_commander_client"
+	@echo "... sin_commander_service"
+	@echo "... _sin_commander_service_generate_messages_check_deps_SinCommanderMsg"
+	@echo "... sin_commander_service_generate_messages_eus"
+	@echo "... sin_commander_service_genpy"
+	@echo "... sin_commander_service_generate_messages_nodejs"
+	@echo "... sin_commander_service_gennodejs"
+	@echo "... sin_commander_service_generate_messages_cpp"
+	@echo "... sin_commander_service_generate_messages_py"
+	@echo "... sin_commander_service_package"
+	@echo "... sin_commander_service_gencpp"
+	@echo "... sin_commander_service_geneus"
+	@echo "... sin_commander_service_generate_messages_lisp"
+	@echo "... sin_commander_service_generate_messages"
+	@echo "... sin_commander_service_genlisp"
 	@echo "... stdr_control_package"
 	@echo "... stdr_open_loop_commander"
 	@echo "... reactive_commander"
@@ -12886,6 +13396,7 @@ help:
 	@echo "... test_traj_sin_sender_irb120"
 	@echo "... test_traj_sender_irb120"
 	@echo "... irb120_ctl_interface"
+	@echo "... traj_joint_space_control"
 	@echo "... irb120_ctl_interface_package"
 	@echo "... lidar_alarm_package"
 	@echo "... lidar_alarm"
@@ -12907,6 +13418,27 @@ help:
 	@echo "... simple_baxter_gripper_interface"
 	@echo "... simple_baxter_gripper_interface_package"
 	@echo "... baxter_gripper_lib_test_main"
+	@echo "... sin_commander_action_server_generate_messages_cpp"
+	@echo "... _sin_commander_action_server_generate_messages_check_deps_sinGoal"
+	@echo "... _sin_commander_action_server_generate_messages_check_deps_sinAction"
+	@echo "... sin_commander_action_server_gennodejs"
+	@echo "... _sin_commander_action_server_generate_messages_check_deps_sinResult"
+	@echo "... _sin_commander_action_server_generate_messages_check_deps_sinActionGoal"
+	@echo "... _sin_commander_action_server_generate_messages_check_deps_sinActionFeedback"
+	@echo "... _sin_commander_action_server_generate_messages_check_deps_sinFeedback"
+	@echo "... sin_commander_action_server_generate_messages_eus"
+	@echo "... sin_commander_action_server_genlisp"
+	@echo "... _sin_commander_action_server_generate_messages_check_deps_sinActionResult"
+	@echo "... sin_commander_action_server_gencpp"
+	@echo "... sin_commander_action_server_generate_messages"
+	@echo "... sin_commander_action_server_geneus"
+	@echo "... sin_commander_action_server"
+	@echo "... sin_commander_action_server_package"
+	@echo "... sin_commander_action_server_generate_messages_lisp"
+	@echo "... sin_commander_action_server_generate_messages_nodejs"
+	@echo "... sin_commander_action_server_generate_messages_py"
+	@echo "... sin_commander_action_server_genpy"
+	@echo "... sin_commander_action_client"
 	@echo "... sine_commander_package"
 	@echo "... sine_commander"
 	@echo "... example_eigen_plane_fit"

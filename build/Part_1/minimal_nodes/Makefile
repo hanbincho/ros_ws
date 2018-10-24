@@ -56,6 +56,17 @@ CMAKE_BINARY_DIR = /home/hanbin/ros_ws/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -67,17 +78,6 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -240,6 +240,21 @@ minimal_controller/fast:
 	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_1/minimal_nodes/CMakeFiles/minimal_controller.dir/build.make Part_1/minimal_nodes/CMakeFiles/minimal_controller.dir/build
 .PHONY : minimal_controller/fast
 
+# Convenience name for target.
+Part_1/minimal_nodes/CMakeFiles/sin_commander.dir/rule:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Part_1/minimal_nodes/CMakeFiles/sin_commander.dir/rule
+.PHONY : Part_1/minimal_nodes/CMakeFiles/sin_commander.dir/rule
+
+# Convenience name for target.
+sin_commander: Part_1/minimal_nodes/CMakeFiles/sin_commander.dir/rule
+
+.PHONY : sin_commander
+
+# fast build rule for target.
+sin_commander/fast:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_1/minimal_nodes/CMakeFiles/sin_commander.dir/build.make Part_1/minimal_nodes/CMakeFiles/sin_commander.dir/build
+.PHONY : sin_commander/fast
+
 src/minimal_controller.o: src/minimal_controller.cpp.o
 
 .PHONY : src/minimal_controller.o
@@ -348,6 +363,33 @@ src/minimal_subscriber.cpp.s:
 	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_1/minimal_nodes/CMakeFiles/minimal_subscriber.dir/build.make Part_1/minimal_nodes/CMakeFiles/minimal_subscriber.dir/src/minimal_subscriber.cpp.s
 .PHONY : src/minimal_subscriber.cpp.s
 
+src/sin_commander.o: src/sin_commander.cpp.o
+
+.PHONY : src/sin_commander.o
+
+# target to build an object file
+src/sin_commander.cpp.o:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_1/minimal_nodes/CMakeFiles/sin_commander.dir/build.make Part_1/minimal_nodes/CMakeFiles/sin_commander.dir/src/sin_commander.cpp.o
+.PHONY : src/sin_commander.cpp.o
+
+src/sin_commander.i: src/sin_commander.cpp.i
+
+.PHONY : src/sin_commander.i
+
+# target to preprocess a source file
+src/sin_commander.cpp.i:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_1/minimal_nodes/CMakeFiles/sin_commander.dir/build.make Part_1/minimal_nodes/CMakeFiles/sin_commander.dir/src/sin_commander.cpp.i
+.PHONY : src/sin_commander.cpp.i
+
+src/sin_commander.s: src/sin_commander.cpp.s
+
+.PHONY : src/sin_commander.s
+
+# target to generate assembly for a file
+src/sin_commander.cpp.s:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_1/minimal_nodes/CMakeFiles/sin_commander.dir/build.make Part_1/minimal_nodes/CMakeFiles/sin_commander.dir/src/sin_commander.cpp.s
+.PHONY : src/sin_commander.cpp.s
+
 src/sleepy_minimal_publisher.o: src/sleepy_minimal_publisher.cpp.o
 
 .PHONY : src/sleepy_minimal_publisher.o
@@ -381,17 +423,18 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... rebuild_cache"
 	@echo "... minimal_simulator"
 	@echo "... install"
 	@echo "... minimal_subscriber"
 	@echo "... sleepy_minimal_publisher"
 	@echo "... minimal_publisher"
-	@echo "... rebuild_cache"
 	@echo "... minimal_controller"
 	@echo "... edit_cache"
 	@echo "... list_install_components"
 	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... sin_commander"
 	@echo "... test"
 	@echo "... src/minimal_controller.o"
 	@echo "... src/minimal_controller.i"
@@ -405,6 +448,9 @@ help:
 	@echo "... src/minimal_subscriber.o"
 	@echo "... src/minimal_subscriber.i"
 	@echo "... src/minimal_subscriber.s"
+	@echo "... src/sin_commander.o"
+	@echo "... src/sin_commander.i"
+	@echo "... src/sin_commander.s"
 	@echo "... src/sleepy_minimal_publisher.o"
 	@echo "... src/sleepy_minimal_publisher.i"
 	@echo "... src/sleepy_minimal_publisher.s"

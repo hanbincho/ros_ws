@@ -1,0 +1,119 @@
+; Auto-generated. Do not edit!
+
+
+(cl:in-package sin_commander_action_server-msg)
+
+
+;//! \htmlinclude sinGoal.msg.html
+
+(cl:defclass <sinGoal> (roslisp-msg-protocol:ros-message)
+  ((amp
+    :reader amp
+    :initarg :amp
+    :type cl:float
+    :initform 0.0)
+   (freq
+    :reader freq
+    :initarg :freq
+    :type cl:float
+    :initform 0.0)
+   (cycles
+    :reader cycles
+    :initarg :cycles
+    :type cl:float
+    :initform 0.0))
+)
+
+(cl:defclass sinGoal (<sinGoal>)
+  ())
+
+(cl:defmethod cl:initialize-instance :after ((m <sinGoal>) cl:&rest args)
+  (cl:declare (cl:ignorable args))
+  (cl:unless (cl:typep m 'sinGoal)
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name sin_commander_action_server-msg:<sinGoal> is deprecated: use sin_commander_action_server-msg:sinGoal instead.")))
+
+(cl:ensure-generic-function 'amp-val :lambda-list '(m))
+(cl:defmethod amp-val ((m <sinGoal>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sin_commander_action_server-msg:amp-val is deprecated.  Use sin_commander_action_server-msg:amp instead.")
+  (amp m))
+
+(cl:ensure-generic-function 'freq-val :lambda-list '(m))
+(cl:defmethod freq-val ((m <sinGoal>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sin_commander_action_server-msg:freq-val is deprecated.  Use sin_commander_action_server-msg:freq instead.")
+  (freq m))
+
+(cl:ensure-generic-function 'cycles-val :lambda-list '(m))
+(cl:defmethod cycles-val ((m <sinGoal>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sin_commander_action_server-msg:cycles-val is deprecated.  Use sin_commander_action_server-msg:cycles instead.")
+  (cycles m))
+(cl:defmethod roslisp-msg-protocol:serialize ((msg <sinGoal>) ostream)
+  "Serializes a message object of type '<sinGoal>"
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'amp))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'freq))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'cycles))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+)
+(cl:defmethod roslisp-msg-protocol:deserialize ((msg <sinGoal>) istream)
+  "Deserializes a message object of type '<sinGoal>"
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'amp) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'freq) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'cycles) (roslisp-utils:decode-single-float-bits bits)))
+  msg
+)
+(cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<sinGoal>)))
+  "Returns string type for a message object of type '<sinGoal>"
+  "sin_commander_action_server/sinGoal")
+(cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'sinGoal)))
+  "Returns string type for a message object of type 'sinGoal"
+  "sin_commander_action_server/sinGoal")
+(cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<sinGoal>)))
+  "Returns md5sum for a message object of type '<sinGoal>"
+  "ffeb59ebfe8b276c08f84c2c146723ca")
+(cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'sinGoal)))
+  "Returns md5sum for a message object of type 'sinGoal"
+  "ffeb59ebfe8b276c08f84c2c146723ca")
+(cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<sinGoal>)))
+  "Returns full string definition for message of type '<sinGoal>"
+  (cl:format cl:nil "# ====== DO NOT MODIFY! AUTOGENERATED FROM AN ACTION DEFINITION ======~%#goal definition~%float32 amp~%float32 freq~%float32 cycles~%~%~%"))
+(cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'sinGoal)))
+  "Returns full string definition for message of type 'sinGoal"
+  (cl:format cl:nil "# ====== DO NOT MODIFY! AUTOGENERATED FROM AN ACTION DEFINITION ======~%#goal definition~%float32 amp~%float32 freq~%float32 cycles~%~%~%"))
+(cl:defmethod roslisp-msg-protocol:serialization-length ((msg <sinGoal>))
+  (cl:+ 0
+     4
+     4
+     4
+))
+(cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <sinGoal>))
+  "Converts a ROS message object to a list"
+  (cl:list 'sinGoal
+    (cl:cons ':amp (amp msg))
+    (cl:cons ':freq (freq msg))
+    (cl:cons ':cycles (cycles msg))
+))

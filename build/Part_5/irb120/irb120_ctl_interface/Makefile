@@ -211,6 +211,21 @@ irb120_ctl_interface/fast:
 .PHONY : irb120_ctl_interface/fast
 
 # Convenience name for target.
+Part_5/irb120/irb120_ctl_interface/CMakeFiles/traj_joint_space_control.dir/rule:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Part_5/irb120/irb120_ctl_interface/CMakeFiles/traj_joint_space_control.dir/rule
+.PHONY : Part_5/irb120/irb120_ctl_interface/CMakeFiles/traj_joint_space_control.dir/rule
+
+# Convenience name for target.
+traj_joint_space_control: Part_5/irb120/irb120_ctl_interface/CMakeFiles/traj_joint_space_control.dir/rule
+
+.PHONY : traj_joint_space_control
+
+# fast build rule for target.
+traj_joint_space_control/fast:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_5/irb120/irb120_ctl_interface/CMakeFiles/traj_joint_space_control.dir/build.make Part_5/irb120/irb120_ctl_interface/CMakeFiles/traj_joint_space_control.dir/build
+.PHONY : traj_joint_space_control/fast
+
+# Convenience name for target.
 Part_5/irb120/irb120_ctl_interface/CMakeFiles/irb120_ctl_interface_package.dir/rule:
 	cd /home/hanbin/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Part_5/irb120/irb120_ctl_interface/CMakeFiles/irb120_ctl_interface_package.dir/rule
 .PHONY : Part_5/irb120/irb120_ctl_interface/CMakeFiles/irb120_ctl_interface_package.dir/rule
@@ -306,6 +321,33 @@ src/test_traj_sin_sender_irb120.cpp.s:
 	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_5/irb120/irb120_ctl_interface/CMakeFiles/test_traj_sin_sender_irb120.dir/build.make Part_5/irb120/irb120_ctl_interface/CMakeFiles/test_traj_sin_sender_irb120.dir/src/test_traj_sin_sender_irb120.cpp.s
 .PHONY : src/test_traj_sin_sender_irb120.cpp.s
 
+src/traj_joint_space_control.o: src/traj_joint_space_control.cpp.o
+
+.PHONY : src/traj_joint_space_control.o
+
+# target to build an object file
+src/traj_joint_space_control.cpp.o:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_5/irb120/irb120_ctl_interface/CMakeFiles/traj_joint_space_control.dir/build.make Part_5/irb120/irb120_ctl_interface/CMakeFiles/traj_joint_space_control.dir/src/traj_joint_space_control.cpp.o
+.PHONY : src/traj_joint_space_control.cpp.o
+
+src/traj_joint_space_control.i: src/traj_joint_space_control.cpp.i
+
+.PHONY : src/traj_joint_space_control.i
+
+# target to preprocess a source file
+src/traj_joint_space_control.cpp.i:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_5/irb120/irb120_ctl_interface/CMakeFiles/traj_joint_space_control.dir/build.make Part_5/irb120/irb120_ctl_interface/CMakeFiles/traj_joint_space_control.dir/src/traj_joint_space_control.cpp.i
+.PHONY : src/traj_joint_space_control.cpp.i
+
+src/traj_joint_space_control.s: src/traj_joint_space_control.cpp.s
+
+.PHONY : src/traj_joint_space_control.s
+
+# target to generate assembly for a file
+src/traj_joint_space_control.cpp.s:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_5/irb120/irb120_ctl_interface/CMakeFiles/traj_joint_space_control.dir/build.make Part_5/irb120/irb120_ctl_interface/CMakeFiles/traj_joint_space_control.dir/src/traj_joint_space_control.cpp.s
+.PHONY : src/traj_joint_space_control.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -316,6 +358,7 @@ help:
 	@echo "... test_traj_sender_irb120"
 	@echo "... install"
 	@echo "... irb120_ctl_interface"
+	@echo "... traj_joint_space_control"
 	@echo "... irb120_ctl_interface_package"
 	@echo "... list_install_components"
 	@echo "... install/strip"
@@ -332,6 +375,9 @@ help:
 	@echo "... src/test_traj_sin_sender_irb120.o"
 	@echo "... src/test_traj_sin_sender_irb120.i"
 	@echo "... src/test_traj_sin_sender_irb120.s"
+	@echo "... src/traj_joint_space_control.o"
+	@echo "... src/traj_joint_space_control.i"
+	@echo "... src/traj_joint_space_control.s"
 .PHONY : help
 
 
