@@ -1,0 +1,4 @@
+float32 amp
+float32 freq
+---
+float32 sin_velocity

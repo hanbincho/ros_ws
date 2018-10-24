@@ -107,6 +107,7 @@ add_executable(sleepy_minimal_publisher src/sleepy_minimal_publisher.cpp)
 add_executable(minimal_subscriber src/minimal_subscriber.cpp)
 add_executable(minimal_simulator src/minimal_simulator.cpp)
 add_executable(minimal_controller src/minimal_controller.cpp)
+add_executable(sin_commander src/sin_commander.cpp)
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
 # add_dependencies(minimal_nodes_node minimal_nodes_generate_messages_cpp)
@@ -117,6 +118,7 @@ target_link_libraries(sleepy_minimal_publisher  ${catkin_LIBRARIES} )
 target_link_libraries(minimal_subscriber  ${catkin_LIBRARIES} )
 target_link_libraries(minimal_simulator  ${catkin_LIBRARIES} )
 target_link_libraries(minimal_controller  ${catkin_LIBRARIES} )
+target_link_libraries(sin_commander  ${catkin_LIBRARIES} )
 #############
 ## Install ##
 #############

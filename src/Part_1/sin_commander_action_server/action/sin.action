@@ -1,0 +1,10 @@
+#goal definition
+float32 amp
+float32 freq
+float32 cycles
+---
+#result definition
+bool is_done
+---
+#feedback
+
