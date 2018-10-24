@@ -153,13 +153,6 @@ sticky_fingers_EXTERNAL_OBJECTS =
 /home/hanbin/ros_ws/devel/lib/libsticky_fingers.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
 /home/hanbin/ros_ws/devel/lib/libsticky_fingers.so: /usr/lib/x86_64-linux-gnu/libignition-math2.so
 /home/hanbin/ros_ws/devel/lib/libsticky_fingers.so: /usr/lib/x86_64-linux-gnu/libignition-math2.so
-/home/hanbin/ros_ws/devel/lib/libsticky_fingers.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
-/home/hanbin/ros_ws/devel/lib/libsticky_fingers.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
-/home/hanbin/ros_ws/devel/lib/libsticky_fingers.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
-/home/hanbin/ros_ws/devel/lib/libsticky_fingers.so: /opt/ros/kinetic/lib/libroslib.so
-/home/hanbin/ros_ws/devel/lib/libsticky_fingers.so: /opt/ros/kinetic/lib/librospack.so
-/home/hanbin/ros_ws/devel/lib/libsticky_fingers.so: /usr/lib/x86_64-linux-gnu/libpython2.7.so
-/home/hanbin/ros_ws/devel/lib/libsticky_fingers.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
 /home/hanbin/ros_ws/devel/lib/libsticky_fingers.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
 /home/hanbin/ros_ws/devel/lib/libsticky_fingers.so: /opt/ros/kinetic/lib/libtf.so
 /home/hanbin/ros_ws/devel/lib/libsticky_fingers.so: /opt/ros/kinetic/lib/libtf2_ros.so
@@ -193,7 +186,6 @@ sticky_fingers_EXTERNAL_OBJECTS =
 /home/hanbin/ros_ws/devel/lib/libsticky_fingers.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 /home/hanbin/ros_ws/devel/lib/libsticky_fingers.so: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/hanbin/ros_ws/devel/lib/libsticky_fingers.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
-/home/hanbin/ros_ws/devel/lib/libsticky_fingers.so: /usr/lib/x86_64-linux-gnu/libignition-math2.so
 /home/hanbin/ros_ws/devel/lib/libsticky_fingers.so: learning_ros_external_pkgs_kinetic/sticky_fingers/CMakeFiles/sticky_fingers.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hanbin/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/hanbin/ros_ws/devel/lib/libsticky_fingers.so"
 	cd /home/hanbin/ros_ws/build/learning_ros_external_pkgs_kinetic/sticky_fingers && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sticky_fingers.dir/link.txt --verbose=$(VERBOSE)

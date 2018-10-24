@@ -111,9 +111,6 @@ gazebo_ros_openni_kinect_EXTERNAL_OBJECTS =
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_openni_kinect.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_openni_kinect.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_openni_kinect.so: /usr/lib/x86_64-linux-gnu/libignition-math2.so
-/home/hanbin/ros_ws/devel/lib/libgazebo_ros_openni_kinect.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
-/home/hanbin/ros_ws/devel/lib/libgazebo_ros_openni_kinect.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
-/home/hanbin/ros_ws/devel/lib/libgazebo_ros_openni_kinect.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_openni_kinect.so: /usr/lib/x86_64-linux-gnu/libignition-math2.so
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_openni_kinect.so: /opt/ros/kinetic/lib/libnodeletlib.so
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_openni_kinect.so: /opt/ros/kinetic/lib/libbondcpp.so
@@ -166,9 +163,6 @@ gazebo_ros_openni_kinect_EXTERNAL_OBJECTS =
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_openni_kinect.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_openni_kinect.so: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_openni_kinect.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
-/home/hanbin/ros_ws/devel/lib/libgazebo_ros_openni_kinect.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
-/home/hanbin/ros_ws/devel/lib/libgazebo_ros_openni_kinect.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
-/home/hanbin/ros_ws/devel/lib/libgazebo_ros_openni_kinect.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_openni_kinect.so: /opt/ros/kinetic/lib/libnodeletlib.so
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_openni_kinect.so: /opt/ros/kinetic/lib/libbondcpp.so
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_openni_kinect.so: /usr/lib/x86_64-linux-gnu/libuuid.so

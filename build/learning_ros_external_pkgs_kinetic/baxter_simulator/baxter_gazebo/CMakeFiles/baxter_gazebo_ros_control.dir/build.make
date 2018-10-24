@@ -171,14 +171,6 @@ baxter_gazebo_ros_control_EXTERNAL_OBJECTS =
 /home/hanbin/ros_ws/devel/lib/libbaxter_gazebo_ros_control.so: /usr/lib/x86_64-linux-gnu/libignition-math2.so
 /home/hanbin/ros_ws/devel/lib/libbaxter_gazebo_ros_control.so: /usr/lib/x86_64-linux-gnu/libignition-math2.so
 /home/hanbin/ros_ws/devel/lib/libbaxter_gazebo_ros_control.so: /home/hanbin/ros_ws/devel/lib/libgazebo_ros_control.so
-/home/hanbin/ros_ws/devel/lib/libbaxter_gazebo_ros_control.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
-/home/hanbin/ros_ws/devel/lib/libbaxter_gazebo_ros_control.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
-/home/hanbin/ros_ws/devel/lib/libbaxter_gazebo_ros_control.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
-/home/hanbin/ros_ws/devel/lib/libbaxter_gazebo_ros_control.so: /opt/ros/kinetic/lib/libtf.so
-/home/hanbin/ros_ws/devel/lib/libbaxter_gazebo_ros_control.so: /opt/ros/kinetic/lib/libtf2_ros.so
-/home/hanbin/ros_ws/devel/lib/libbaxter_gazebo_ros_control.so: /opt/ros/kinetic/lib/libactionlib.so
-/home/hanbin/ros_ws/devel/lib/libbaxter_gazebo_ros_control.so: /opt/ros/kinetic/lib/libmessage_filters.so
-/home/hanbin/ros_ws/devel/lib/libbaxter_gazebo_ros_control.so: /opt/ros/kinetic/lib/libtf2.so
 /home/hanbin/ros_ws/devel/lib/libbaxter_gazebo_ros_control.so: /opt/ros/kinetic/lib/libcontrol_toolbox.so
 /home/hanbin/ros_ws/devel/lib/libbaxter_gazebo_ros_control.so: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/hanbin/ros_ws/devel/lib/libbaxter_gazebo_ros_control.so: /opt/ros/kinetic/lib/librealtime_tools.so
@@ -239,6 +231,7 @@ baxter_gazebo_ros_control_EXTERNAL_OBJECTS =
 /home/hanbin/ros_ws/devel/lib/libbaxter_gazebo_ros_control.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
 /home/hanbin/ros_ws/devel/lib/libbaxter_gazebo_ros_control.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
 /home/hanbin/ros_ws/devel/lib/libbaxter_gazebo_ros_control.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
+/home/hanbin/ros_ws/devel/lib/libbaxter_gazebo_ros_control.so: /usr/lib/x86_64-linux-gnu/libignition-math2.so
 /home/hanbin/ros_ws/devel/lib/libbaxter_gazebo_ros_control.so: /usr/lib/x86_64-linux-gnu/libignition-math2.so
 /home/hanbin/ros_ws/devel/lib/libbaxter_gazebo_ros_control.so: learning_ros_external_pkgs_kinetic/baxter_simulator/baxter_gazebo/CMakeFiles/baxter_gazebo_ros_control.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hanbin/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/hanbin/ros_ws/devel/lib/libbaxter_gazebo_ros_control.so"

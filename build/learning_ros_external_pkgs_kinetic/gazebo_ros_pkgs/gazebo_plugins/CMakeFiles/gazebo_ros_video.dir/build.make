@@ -110,9 +110,6 @@ gazebo_ros_video_EXTERNAL_OBJECTS =
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libignition-math2.so
-/home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
-/home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
-/home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libignition-math2.so
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /opt/ros/kinetic/lib/libnodeletlib.so
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /opt/ros/kinetic/lib/libbondcpp.so
@@ -171,9 +168,7 @@ gazebo_ros_video_EXTERNAL_OBJECTS =
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
-/home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
-/home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
+/home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libignition-math2.so
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /opt/ros/kinetic/lib/libnodeletlib.so
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /opt/ros/kinetic/lib/libbondcpp.so
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libuuid.so
@@ -218,19 +213,6 @@ gazebo_ros_video_EXTERNAL_OBJECTS =
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /opt/ros/kinetic/lib/libroscpp_serialization.so
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /opt/ros/kinetic/lib/librostime.so
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /opt/ros/kinetic/lib/libcpp_common.so
-/home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
-/home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
 /home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so: learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_video.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hanbin/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/hanbin/ros_ws/devel/lib/libgazebo_ros_video.so"
