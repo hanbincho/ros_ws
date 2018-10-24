@@ -1,0 +1,8 @@
+prefix=/home/hanbin/ros_ws/install
+
+Name: publish_selected_patch
+Description: Description of publish_selected_patch
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/hanbin/ros_ws/install/lib 
+Requires: 

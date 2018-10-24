@@ -1,0 +1,8 @@
+prefix=/home/hanbin/ros_ws/install
+
+Name: rrbot
+Description: Description of rrbot
+Version: 0.0.0
+Cflags: -I/home/hanbin/ros_ws/install/include
+Libs: -L/home/hanbin/ros_ws/install/lib -lrrbot_fk_ik -lplanar_3rbot_fk_ik
+Requires: roscpp sensor_msgs geometry_msgs std_msgs

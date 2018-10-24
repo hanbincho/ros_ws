@@ -1,0 +1,8 @@
+prefix=/home/hanbin/ros_ws/devel
+
+Name: ur10_launch
+Description: Description of ur10_launch
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/hanbin/ros_ws/devel/lib 
+Requires: 

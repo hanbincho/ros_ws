@@ -1,0 +1,8 @@
+prefix=/home/hanbin/ros_ws/devel
+
+Name: stdr_control
+Description: Description of stdr_control
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/hanbin/ros_ws/devel/lib 
+Requires: roscpp geometry_msgs std_msgs

@@ -1,0 +1,2 @@
+set(navigator_MESSAGE_FILES "/home/hanbin/ros_ws/devel/share/navigator/msg/navigatorAction.msg;/home/hanbin/ros_ws/devel/share/navigator/msg/navigatorActionGoal.msg;/home/hanbin/ros_ws/devel/share/navigator/msg/navigatorActionResult.msg;/home/hanbin/ros_ws/devel/share/navigator/msg/navigatorActionFeedback.msg;/home/hanbin/ros_ws/devel/share/navigator/msg/navigatorGoal.msg;/home/hanbin/ros_ws/devel/share/navigator/msg/navigatorResult.msg;/home/hanbin/ros_ws/devel/share/navigator/msg/navigatorFeedback.msg")
+set(navigator_SERVICE_FILES "")
