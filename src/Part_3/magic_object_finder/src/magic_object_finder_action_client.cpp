@@ -63,7 +63,7 @@ int main(int argc, char** argv) {
     ros::Publisher pose_publisher = nh.advertise<geometry_msgs::PoseStamped>("triad_display_pose", 1, true); 
     //g_pose_publisher = &pose_publisher;
     magic_object_finder::magicObjectFinderGoal object_finder_goal;
-    object_finder_goal.object_name = "gear_part_ariac"; //irb120"; 
+    object_finder_goal.object_name = "gear_part"; //irb120"; 
 
     object_finder_ac.sendGoal(object_finder_goal,&objectFinderDoneCb); 
     ros::spinOnce();
