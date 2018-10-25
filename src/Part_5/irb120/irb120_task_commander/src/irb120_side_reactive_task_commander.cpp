@@ -243,7 +243,7 @@ int main(int argc, char** argv) {
 
     // SECOND TRAJECTORY MOVEMENT- TOUCH TOP OF GEAR
     //go to pose to touch top of gear part; same x and y, but lower z value for flange origin
-    flange_origin <<g_perceived_object_pose.pose.position.x + 0.07, g_perceived_object_pose.pose.position.y, 0.0; 
+    flange_origin <<g_perceived_object_pose.pose.position.x + 0.08, g_perceived_object_pose.pose.position.y, 0.0; 
     goal_flange_affine.translation() = flange_origin;
     ROS_INFO_STREAM("move to flange origin= " << goal_flange_affine.translation().transpose() << endl);
 
