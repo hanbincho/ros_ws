@@ -33,6 +33,7 @@ SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
 # may add more of these lines for more nodes from the same package
 cs_add_executable(magic_object_finder src/magic_object_finder_as.cpp)
 cs_add_executable(magic_object_finder_action_client src/magic_object_finder_action_client.cpp)
+cs_add_executable(magic_object_finder_as src/magic_object_finder_as.cpp)
 #the following is required, if desire to link a node in this package with a library created in this same package
 # edit the arguments to reference the named node and named library within this package
 # target_link_libraries(example my_lib)

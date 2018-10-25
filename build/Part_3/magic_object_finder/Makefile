@@ -100,17 +100,6 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
-
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -121,6 +110,17 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -226,6 +226,21 @@ magic_object_finder_geneus/fast:
 .PHONY : magic_object_finder_geneus/fast
 
 # Convenience name for target.
+Part_3/magic_object_finder/CMakeFiles/magic_object_finder_generate_messages_lisp.dir/rule:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Part_3/magic_object_finder/CMakeFiles/magic_object_finder_generate_messages_lisp.dir/rule
+.PHONY : Part_3/magic_object_finder/CMakeFiles/magic_object_finder_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+magic_object_finder_generate_messages_lisp: Part_3/magic_object_finder/CMakeFiles/magic_object_finder_generate_messages_lisp.dir/rule
+
+.PHONY : magic_object_finder_generate_messages_lisp
+
+# fast build rule for target.
+magic_object_finder_generate_messages_lisp/fast:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_3/magic_object_finder/CMakeFiles/magic_object_finder_generate_messages_lisp.dir/build.make Part_3/magic_object_finder/CMakeFiles/magic_object_finder_generate_messages_lisp.dir/build
+.PHONY : magic_object_finder_generate_messages_lisp/fast
+
+# Convenience name for target.
 Part_3/magic_object_finder/CMakeFiles/_magic_object_finder_generate_messages_check_deps_magicObjectFinderFeedback.dir/rule:
 	cd /home/hanbin/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Part_3/magic_object_finder/CMakeFiles/_magic_object_finder_generate_messages_check_deps_magicObjectFinderFeedback.dir/rule
 .PHONY : Part_3/magic_object_finder/CMakeFiles/_magic_object_finder_generate_messages_check_deps_magicObjectFinderFeedback.dir/rule
@@ -299,21 +314,6 @@ magic_object_finder_generate_messages: Part_3/magic_object_finder/CMakeFiles/mag
 magic_object_finder_generate_messages/fast:
 	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_3/magic_object_finder/CMakeFiles/magic_object_finder_generate_messages.dir/build.make Part_3/magic_object_finder/CMakeFiles/magic_object_finder_generate_messages.dir/build
 .PHONY : magic_object_finder_generate_messages/fast
-
-# Convenience name for target.
-Part_3/magic_object_finder/CMakeFiles/magic_object_finder_generate_messages_lisp.dir/rule:
-	cd /home/hanbin/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Part_3/magic_object_finder/CMakeFiles/magic_object_finder_generate_messages_lisp.dir/rule
-.PHONY : Part_3/magic_object_finder/CMakeFiles/magic_object_finder_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-magic_object_finder_generate_messages_lisp: Part_3/magic_object_finder/CMakeFiles/magic_object_finder_generate_messages_lisp.dir/rule
-
-.PHONY : magic_object_finder_generate_messages_lisp
-
-# fast build rule for target.
-magic_object_finder_generate_messages_lisp/fast:
-	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_3/magic_object_finder/CMakeFiles/magic_object_finder_generate_messages_lisp.dir/build.make Part_3/magic_object_finder/CMakeFiles/magic_object_finder_generate_messages_lisp.dir/build
-.PHONY : magic_object_finder_generate_messages_lisp/fast
 
 # Convenience name for target.
 Part_3/magic_object_finder/CMakeFiles/magic_object_finder_action_client.dir/rule:
@@ -480,6 +480,21 @@ magic_object_finder/fast:
 	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_3/magic_object_finder/CMakeFiles/magic_object_finder.dir/build.make Part_3/magic_object_finder/CMakeFiles/magic_object_finder.dir/build
 .PHONY : magic_object_finder/fast
 
+# Convenience name for target.
+Part_3/magic_object_finder/CMakeFiles/magic_object_finder_as.dir/rule:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Part_3/magic_object_finder/CMakeFiles/magic_object_finder_as.dir/rule
+.PHONY : Part_3/magic_object_finder/CMakeFiles/magic_object_finder_as.dir/rule
+
+# Convenience name for target.
+magic_object_finder_as: Part_3/magic_object_finder/CMakeFiles/magic_object_finder_as.dir/rule
+
+.PHONY : magic_object_finder_as
+
+# fast build rule for target.
+magic_object_finder_as/fast:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_3/magic_object_finder/CMakeFiles/magic_object_finder_as.dir/build.make Part_3/magic_object_finder/CMakeFiles/magic_object_finder_as.dir/build
+.PHONY : magic_object_finder_as/fast
+
 src/magic_object_finder_action_client.o: src/magic_object_finder_action_client.cpp.o
 
 .PHONY : src/magic_object_finder_action_client.o
@@ -514,6 +529,7 @@ src/magic_object_finder_as.o: src/magic_object_finder_as.cpp.o
 # target to build an object file
 src/magic_object_finder_as.cpp.o:
 	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_3/magic_object_finder/CMakeFiles/magic_object_finder.dir/build.make Part_3/magic_object_finder/CMakeFiles/magic_object_finder.dir/src/magic_object_finder_as.cpp.o
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_3/magic_object_finder/CMakeFiles/magic_object_finder_as.dir/build.make Part_3/magic_object_finder/CMakeFiles/magic_object_finder_as.dir/src/magic_object_finder_as.cpp.o
 .PHONY : src/magic_object_finder_as.cpp.o
 
 src/magic_object_finder_as.i: src/magic_object_finder_as.cpp.i
@@ -523,6 +539,7 @@ src/magic_object_finder_as.i: src/magic_object_finder_as.cpp.i
 # target to preprocess a source file
 src/magic_object_finder_as.cpp.i:
 	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_3/magic_object_finder/CMakeFiles/magic_object_finder.dir/build.make Part_3/magic_object_finder/CMakeFiles/magic_object_finder.dir/src/magic_object_finder_as.cpp.i
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_3/magic_object_finder/CMakeFiles/magic_object_finder_as.dir/build.make Part_3/magic_object_finder/CMakeFiles/magic_object_finder_as.dir/src/magic_object_finder_as.cpp.i
 .PHONY : src/magic_object_finder_as.cpp.i
 
 src/magic_object_finder_as.s: src/magic_object_finder_as.cpp.s
@@ -532,6 +549,7 @@ src/magic_object_finder_as.s: src/magic_object_finder_as.cpp.s
 # target to generate assembly for a file
 src/magic_object_finder_as.cpp.s:
 	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_3/magic_object_finder/CMakeFiles/magic_object_finder.dir/build.make Part_3/magic_object_finder/CMakeFiles/magic_object_finder.dir/src/magic_object_finder_as.cpp.s
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_3/magic_object_finder/CMakeFiles/magic_object_finder_as.dir/build.make Part_3/magic_object_finder/CMakeFiles/magic_object_finder_as.dir/src/magic_object_finder_as.cpp.s
 .PHONY : src/magic_object_finder_as.cpp.s
 
 # Help Target
@@ -548,14 +566,14 @@ help:
 	@echo "... _magic_object_finder_generate_messages_check_deps_magicObjectFinderResult"
 	@echo "... install"
 	@echo "... magic_object_finder_geneus"
+	@echo "... install/strip"
+	@echo "... magic_object_finder_generate_messages_lisp"
 	@echo "... _magic_object_finder_generate_messages_check_deps_magicObjectFinderFeedback"
 	@echo "... _magic_object_finder_generate_messages_check_deps_magicObjectFinderActionFeedback"
 	@echo "... magic_object_finder_gencpp"
 	@echo "... install/local"
 	@echo "... _magic_object_finder_generate_messages_check_deps_magicObjectFinderActionResult"
 	@echo "... magic_object_finder_generate_messages"
-	@echo "... magic_object_finder_generate_messages_lisp"
-	@echo "... install/strip"
 	@echo "... magic_object_finder_action_client"
 	@echo "... magic_object_finder_generate_messages_eus"
 	@echo "... magic_object_finder_generate_messages_nodejs"
@@ -568,6 +586,7 @@ help:
 	@echo "... magic_object_finder_gennodejs"
 	@echo "... magic_object_finder_genpy"
 	@echo "... magic_object_finder"
+	@echo "... magic_object_finder_as"
 	@echo "... src/magic_object_finder_action_client.o"
 	@echo "... src/magic_object_finder_action_client.i"
 	@echo "... src/magic_object_finder_action_client.s"

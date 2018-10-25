@@ -10449,6 +10449,19 @@ magic_object_finder_geneus/fast:
 .PHONY : magic_object_finder_geneus/fast
 
 #=============================================================================
+# Target rules for targets named magic_object_finder_generate_messages_lisp
+
+# Build rule for target.
+magic_object_finder_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 magic_object_finder_generate_messages_lisp
+.PHONY : magic_object_finder_generate_messages_lisp
+
+# fast build rule for target.
+magic_object_finder_generate_messages_lisp/fast:
+	$(MAKE) -f Part_3/magic_object_finder/CMakeFiles/magic_object_finder_generate_messages_lisp.dir/build.make Part_3/magic_object_finder/CMakeFiles/magic_object_finder_generate_messages_lisp.dir/build
+.PHONY : magic_object_finder_generate_messages_lisp/fast
+
+#=============================================================================
 # Target rules for targets named _magic_object_finder_generate_messages_check_deps_magicObjectFinderFeedback
 
 # Build rule for target.
@@ -10512,19 +10525,6 @@ magic_object_finder_generate_messages: cmake_check_build_system
 magic_object_finder_generate_messages/fast:
 	$(MAKE) -f Part_3/magic_object_finder/CMakeFiles/magic_object_finder_generate_messages.dir/build.make Part_3/magic_object_finder/CMakeFiles/magic_object_finder_generate_messages.dir/build
 .PHONY : magic_object_finder_generate_messages/fast
-
-#=============================================================================
-# Target rules for targets named magic_object_finder_generate_messages_lisp
-
-# Build rule for target.
-magic_object_finder_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 magic_object_finder_generate_messages_lisp
-.PHONY : magic_object_finder_generate_messages_lisp
-
-# fast build rule for target.
-magic_object_finder_generate_messages_lisp/fast:
-	$(MAKE) -f Part_3/magic_object_finder/CMakeFiles/magic_object_finder_generate_messages_lisp.dir/build.make Part_3/magic_object_finder/CMakeFiles/magic_object_finder_generate_messages_lisp.dir/build
-.PHONY : magic_object_finder_generate_messages_lisp/fast
 
 #=============================================================================
 # Target rules for targets named magic_object_finder_action_client
@@ -10670,17 +10670,30 @@ magic_object_finder/fast:
 .PHONY : magic_object_finder/fast
 
 #=============================================================================
-# Target rules for targets named irb120_task_commander_package
+# Target rules for targets named magic_object_finder_as
 
 # Build rule for target.
-irb120_task_commander_package: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 irb120_task_commander_package
-.PHONY : irb120_task_commander_package
+magic_object_finder_as: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 magic_object_finder_as
+.PHONY : magic_object_finder_as
 
 # fast build rule for target.
-irb120_task_commander_package/fast:
-	$(MAKE) -f Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_task_commander_package.dir/build.make Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_task_commander_package.dir/build
-.PHONY : irb120_task_commander_package/fast
+magic_object_finder_as/fast:
+	$(MAKE) -f Part_3/magic_object_finder/CMakeFiles/magic_object_finder_as.dir/build.make Part_3/magic_object_finder/CMakeFiles/magic_object_finder_as.dir/build
+.PHONY : magic_object_finder_as/fast
+
+#=============================================================================
+# Target rules for targets named irb120_reactive_task_commander
+
+# Build rule for target.
+irb120_reactive_task_commander: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 irb120_reactive_task_commander
+.PHONY : irb120_reactive_task_commander
+
+# fast build rule for target.
+irb120_reactive_task_commander/fast:
+	$(MAKE) -f Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_reactive_task_commander.dir/build.make Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_reactive_task_commander.dir/build
+.PHONY : irb120_reactive_task_commander/fast
 
 #=============================================================================
 # Target rules for targets named irb120_task_commander
@@ -10696,17 +10709,30 @@ irb120_task_commander/fast:
 .PHONY : irb120_task_commander/fast
 
 #=============================================================================
-# Target rules for targets named irb120_reactive_task_commander
+# Target rules for targets named irb120_task_commander_package
 
 # Build rule for target.
-irb120_reactive_task_commander: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 irb120_reactive_task_commander
-.PHONY : irb120_reactive_task_commander
+irb120_task_commander_package: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 irb120_task_commander_package
+.PHONY : irb120_task_commander_package
 
 # fast build rule for target.
-irb120_reactive_task_commander/fast:
-	$(MAKE) -f Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_reactive_task_commander.dir/build.make Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_reactive_task_commander.dir/build
-.PHONY : irb120_reactive_task_commander/fast
+irb120_task_commander_package/fast:
+	$(MAKE) -f Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_task_commander_package.dir/build.make Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_task_commander_package.dir/build
+.PHONY : irb120_task_commander_package/fast
+
+#=============================================================================
+# Target rules for targets named irb120_side_reactive_task_commander
+
+# Build rule for target.
+irb120_side_reactive_task_commander: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 irb120_side_reactive_task_commander
+.PHONY : irb120_side_reactive_task_commander
+
+# fast build rule for target.
+irb120_side_reactive_task_commander/fast:
+	$(MAKE) -f Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_side_reactive_task_commander.dir/build.make Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_side_reactive_task_commander.dir/build
+.PHONY : irb120_side_reactive_task_commander/fast
 
 #=============================================================================
 # Target rules for targets named _navigator_generate_messages_check_deps_navigatorFeedback
@@ -13709,12 +13735,12 @@ help:
 	@echo "... _magic_object_finder_generate_messages_check_deps_magicObjectFinderActionGoal"
 	@echo "... _magic_object_finder_generate_messages_check_deps_magicObjectFinderResult"
 	@echo "... magic_object_finder_geneus"
+	@echo "... magic_object_finder_generate_messages_lisp"
 	@echo "... _magic_object_finder_generate_messages_check_deps_magicObjectFinderFeedback"
 	@echo "... _magic_object_finder_generate_messages_check_deps_magicObjectFinderActionFeedback"
 	@echo "... magic_object_finder_gencpp"
 	@echo "... _magic_object_finder_generate_messages_check_deps_magicObjectFinderActionResult"
 	@echo "... magic_object_finder_generate_messages"
-	@echo "... magic_object_finder_generate_messages_lisp"
 	@echo "... magic_object_finder_action_client"
 	@echo "... magic_object_finder_generate_messages_eus"
 	@echo "... magic_object_finder_generate_messages_nodejs"
@@ -13726,9 +13752,11 @@ help:
 	@echo "... magic_object_finder_gennodejs"
 	@echo "... magic_object_finder_genpy"
 	@echo "... magic_object_finder"
-	@echo "... irb120_task_commander_package"
-	@echo "... irb120_task_commander"
+	@echo "... magic_object_finder_as"
 	@echo "... irb120_reactive_task_commander"
+	@echo "... irb120_task_commander"
+	@echo "... irb120_task_commander_package"
+	@echo "... irb120_side_reactive_task_commander"
 	@echo "... _navigator_generate_messages_check_deps_navigatorFeedback"
 	@echo "... _navigator_generate_messages_check_deps_navigatorActionFeedback"
 	@echo "... navigator_genpy"

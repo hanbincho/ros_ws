@@ -67,38 +67,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -111,16 +79,15 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
 
-# Special rule for the target install/local
-install/local/fast: install/local
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
 
-.PHONY : install/local/fast
+.PHONY : list_install_components/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
@@ -132,6 +99,39 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,19 +166,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_task_commander_package.dir/rule:
-	cd /home/hanbin/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_task_commander_package.dir/rule
-.PHONY : Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_task_commander_package.dir/rule
+Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_reactive_task_commander.dir/rule:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_reactive_task_commander.dir/rule
+.PHONY : Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_reactive_task_commander.dir/rule
 
 # Convenience name for target.
-irb120_task_commander_package: Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_task_commander_package.dir/rule
+irb120_reactive_task_commander: Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_reactive_task_commander.dir/rule
 
-.PHONY : irb120_task_commander_package
+.PHONY : irb120_reactive_task_commander
 
 # fast build rule for target.
-irb120_task_commander_package/fast:
-	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_task_commander_package.dir/build.make Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_task_commander_package.dir/build
-.PHONY : irb120_task_commander_package/fast
+irb120_reactive_task_commander/fast:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_reactive_task_commander.dir/build.make Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_reactive_task_commander.dir/build
+.PHONY : irb120_reactive_task_commander/fast
 
 # Convenience name for target.
 Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_task_commander.dir/rule:
@@ -196,19 +196,34 @@ irb120_task_commander/fast:
 .PHONY : irb120_task_commander/fast
 
 # Convenience name for target.
-Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_reactive_task_commander.dir/rule:
-	cd /home/hanbin/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_reactive_task_commander.dir/rule
-.PHONY : Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_reactive_task_commander.dir/rule
+Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_task_commander_package.dir/rule:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_task_commander_package.dir/rule
+.PHONY : Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_task_commander_package.dir/rule
 
 # Convenience name for target.
-irb120_reactive_task_commander: Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_reactive_task_commander.dir/rule
+irb120_task_commander_package: Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_task_commander_package.dir/rule
 
-.PHONY : irb120_reactive_task_commander
+.PHONY : irb120_task_commander_package
 
 # fast build rule for target.
-irb120_reactive_task_commander/fast:
-	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_reactive_task_commander.dir/build.make Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_reactive_task_commander.dir/build
-.PHONY : irb120_reactive_task_commander/fast
+irb120_task_commander_package/fast:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_task_commander_package.dir/build.make Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_task_commander_package.dir/build
+.PHONY : irb120_task_commander_package/fast
+
+# Convenience name for target.
+Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_side_reactive_task_commander.dir/rule:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_side_reactive_task_commander.dir/rule
+.PHONY : Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_side_reactive_task_commander.dir/rule
+
+# Convenience name for target.
+irb120_side_reactive_task_commander: Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_side_reactive_task_commander.dir/rule
+
+.PHONY : irb120_side_reactive_task_commander
+
+# fast build rule for target.
+irb120_side_reactive_task_commander/fast:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_side_reactive_task_commander.dir/build.make Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_side_reactive_task_commander.dir/build
+.PHONY : irb120_side_reactive_task_commander/fast
 
 src/irb120_reactive_task_commander.o: src/irb120_reactive_task_commander.cpp.o
 
@@ -236,6 +251,33 @@ src/irb120_reactive_task_commander.s: src/irb120_reactive_task_commander.cpp.s
 src/irb120_reactive_task_commander.cpp.s:
 	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_reactive_task_commander.dir/build.make Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_reactive_task_commander.dir/src/irb120_reactive_task_commander.cpp.s
 .PHONY : src/irb120_reactive_task_commander.cpp.s
+
+src/irb120_side_reactive_task_commander.o: src/irb120_side_reactive_task_commander.cpp.o
+
+.PHONY : src/irb120_side_reactive_task_commander.o
+
+# target to build an object file
+src/irb120_side_reactive_task_commander.cpp.o:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_side_reactive_task_commander.dir/build.make Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_side_reactive_task_commander.dir/src/irb120_side_reactive_task_commander.cpp.o
+.PHONY : src/irb120_side_reactive_task_commander.cpp.o
+
+src/irb120_side_reactive_task_commander.i: src/irb120_side_reactive_task_commander.cpp.i
+
+.PHONY : src/irb120_side_reactive_task_commander.i
+
+# target to preprocess a source file
+src/irb120_side_reactive_task_commander.cpp.i:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_side_reactive_task_commander.dir/build.make Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_side_reactive_task_commander.dir/src/irb120_side_reactive_task_commander.cpp.i
+.PHONY : src/irb120_side_reactive_task_commander.cpp.i
+
+src/irb120_side_reactive_task_commander.s: src/irb120_side_reactive_task_commander.cpp.s
+
+.PHONY : src/irb120_side_reactive_task_commander.s
+
+# target to generate assembly for a file
+src/irb120_side_reactive_task_commander.cpp.s:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_side_reactive_task_commander.dir/build.make Part_5/irb120/irb120_task_commander/CMakeFiles/irb120_side_reactive_task_commander.dir/src/irb120_side_reactive_task_commander.cpp.s
+.PHONY : src/irb120_side_reactive_task_commander.cpp.s
 
 src/irb120_task_commander.o: src/irb120_task_commander.cpp.o
 
@@ -271,18 +313,22 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... test"
+	@echo "... irb120_reactive_task_commander"
+	@echo "... irb120_task_commander"
+	@echo "... install"
 	@echo "... irb120_task_commander_package"
 	@echo "... list_install_components"
-	@echo "... install"
-	@echo "... irb120_task_commander"
-	@echo "... irb120_reactive_task_commander"
-	@echo "... install/local"
 	@echo "... install/strip"
+	@echo "... irb120_side_reactive_task_commander"
+	@echo "... install/local"
+	@echo "... test"
+	@echo "... edit_cache"
 	@echo "... src/irb120_reactive_task_commander.o"
 	@echo "... src/irb120_reactive_task_commander.i"
 	@echo "... src/irb120_reactive_task_commander.s"
+	@echo "... src/irb120_side_reactive_task_commander.o"
+	@echo "... src/irb120_side_reactive_task_commander.i"
+	@echo "... src/irb120_side_reactive_task_commander.s"
 	@echo "... src/irb120_task_commander.o"
 	@echo "... src/irb120_task_commander.i"
 	@echo "... src/irb120_task_commander.s"
