@@ -248,11 +248,13 @@ int main(int argc, char** argv) {
     //xxxxxxxxxxxxxxxxxx
 
     // SECOND TRAJECTORY MOVEMENT- MOVE THE ARM NEXT TO THE GEAR AND GET READY TO MOVE IT IN THE X-DIRECTION
-    if (goal_object_pose.pose.position.x <= g_perceived_object_pose.pose.position.x) {
-    	flange_origin << flange_origin(0) + 0.08, g_perceived_object_pose.pose.position.y, 0.0; 
+    if (goal_object_pose.pose.position.y <= g_perceived_object_pose.pose.position.y) {
+    	//flange_origin << flange_origin(0) + 0.08, g_perceived_object_pose.pose.position.y, 0.0; 
+	flange_origin << flange_origin(0), g_perceived_object_pose.pose.position.y + 0.08, 0.0;
     }
     else {
-    	flange_origin << flange_origin(0) - 0.08, g_perceived_object_pose.pose.position.y, 0.0;
+    	//flange_origin << flange_origin(0) - 0.08, g_perceived_object_pose.pose.position.y, 0.0;
+	flange_origin << flange_origin(0), g_perceived_object_pose.pose.position.y - 0.08, 0.0;
     }
     goal_flange_affine.translation() = flange_origin;
     ROS_INFO_STREAM("move to flange origin= " << goal_flange_affine.translation().transpose() << endl);
@@ -276,12 +278,12 @@ int main(int argc, char** argv) {
     ROS_INFO("done with second trajectory");
 
     // THIRD TRAJECTORY MOVEMENT- MOVE THE GEAR A CERTAIN DISTANCE IN THE X-DIRECTION, IN THIS CASE, MOVE IT 0.01 DISPLACEMENT
-    //go to pose to touch top of gear part; same x and y, but lower z value for flange origin
-    if (goal_object_pose.pose.position.x <= g_perceived_object_pose.pose.position.x) {
-    	flange_origin << goal_object_pose.pose.position.x + 0.08, g_perceived_object_pose.pose.position.y, 0.0; 
+    if (goal_object_pose.pose.position.y <= g_perceived_object_pose.pose.position.y) {
+    	//flange_origin << goal_object_pose.pose.position.x + 0.08, g_perceived_object_pose.pose.position.y, 0.0; 
+	flange_origin << g_perceived_object_pose.pose.position.x, goal_object_pose.pose.position.y + 0.08, 0.0; 
     }
     else {
-    	flange_origin << goal_object_pose.pose.position.x - 0.08, g_perceived_object_pose.pose.position.y, 0.0; 
+    	flange_origin << g_perceived_object_pose.pose.position.x, goal_object_pose.pose.position.y - 0.08, 0.0; 
     }
     goal_flange_affine.translation() = flange_origin;
     ROS_INFO_STREAM("move to flange origin= " << goal_flange_affine.translation().transpose() << endl);
@@ -304,15 +306,16 @@ int main(int argc, char** argv) {
     ros::Duration(arrival_time).sleep(); //wait for the motion
     ROS_INFO("done with third trajectory");
 
-    object_finder_goal.object_name = g_object_name.c_str(); //convert string object to old C-style string data
     object_finder_ac.sendGoal(object_finder_goal,&objectFinderDoneCb); //request object finding via action server
 
     // FOURTH TRAJECTORY MOVEMENT- MOVE THE ARM NEXT TO THE GEAR AND GET READY TO MOVE IT IN THE Y-DIRECTION
-    if (goal_object_pose.pose.position.y <= g_perceived_object_pose.pose.position.y) {
-    	flange_origin << goal_object_pose.pose.position.x, g_perceived_object_pose.pose.position.y + 0.08, 0.5; 
+    if (goal_object_pose.pose.position.x <= g_perceived_object_pose.pose.position.x) {
+    	//flange_origin << g_perceived_object_pose.pose.position.x + 0.08, flange_origin(1), 0.2; 
+	flange_origin << g_perceived_object_pose.pose.position.x+0.08, g_perceived_object_pose.pose.position.y, 0.1; 
     }
     else {
-    	flange_origin << goal_object_pose.pose.position.x, g_perceived_object_pose.pose.position.y - 0.08, 0.5;
+    	//flange_origin << g_perceived_object_pose.pose.position.x - 0.08, flange_origin(1), 0.2;
+	flange_origin << g_perceived_object_pose.pose.position.x-0.08, g_perceived_object_pose.pose.position.y, 0.1;
     }
     goal_flange_affine.translation() = flange_origin;
     ROS_INFO_STREAM("move to flange origin= " << goal_flange_affine.translation().transpose() << endl);
@@ -337,11 +340,11 @@ int main(int argc, char** argv) {
 
     // FIFTH TRAJECTORY MOVEMENT- MOVE THE GEAR A CERTAIN DISTANCE IN THE Y-DIRECTION, IN THIS CASE, MOVE IT 0.01 DISPLACEMENT
     //go to pose to touch top of gear part; same x and y, but lower z value for flange origin
-    if (goal_object_pose.pose.position.y <= g_perceived_object_pose.pose.position.y) {
-    	flange_origin << goal_object_pose.pose.position.x, goal_object_pose.pose.position.y + 0.08, 0.0; 
+    if (goal_object_pose.pose.position.x <= g_perceived_object_pose.pose.position.x) {
+    	flange_origin << goal_object_pose.pose.position.x + 0.08, g_perceived_object_pose.pose.position.y, 0.0; 
     }
     else {
-    	flange_origin << goal_object_pose.pose.position.x, goal_object_pose.pose.position.y - 0.08, 0.0; 
+    	flange_origin << goal_object_pose.pose.position.x - 0.08, g_perceived_object_pose.pose.position.y, 0.0; 
     }
     goal_flange_affine.translation() = flange_origin;
     ROS_INFO_STREAM("move to flange origin= " << goal_flange_affine.translation().transpose() << endl);
