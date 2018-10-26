@@ -39,6 +39,7 @@ std::vector<double> g_planner_joint_weights{3, 3, 2, 1, 1, 0.5}; //specify weigh
 string g_object_name("gear_part");  //hard-coded object name; edit this for different objects
 int g_found_object_code; //global to communicate between callback and main: true if named object was found
 geometry_msgs::PoseStamped g_perceived_object_pose; //global to communicate between callback and main: pose  of found object
+geometry_msgs::PoseStamped goal_object_pose; // goal pose: where gear should be after x and y adjustments
 
 ros::Publisher *g_pose_publisher; //make this global so callback can access it--for displaying object frames in rviz
 
@@ -111,6 +112,11 @@ int main(int argc, char** argv) {
     Eigen::Affine3d start_flange_affine, goal_flange_affine; //specify start and goal in Cartesian coords
     std::vector<Eigen::VectorXd> optimal_path; //a path in joint space is a sequence of 6-DOF joint-angle specifications
     trajectory_msgs::JointTrajectory new_trajectory; //will package trajectory messages here
+
+    // Define goal position
+    goal_object_pose.pose.position.x = 0.23;
+    goal_object_pose.pose.position.y = 0.23;
+    goal_object_pose.pose.position.z = 0.0;
 
 
     //set up an action client to query object poses using the magic object finder
@@ -210,7 +216,7 @@ int main(int argc, char** argv) {
         return 1;
     }
     //xxxxxxxxxx   done with inquiry.  If here, then part pose is in g_perceived_object_pose.  Use it to compute robot motion    
-
+//**************************************************************************************************************************************//
     // FIRST TRAJECTORY MOVEMENT MADE
     goal_flange_affine.linear() = R_down; //set the  goal orientation for flange to point down; will not need to change this for now
     //xxxx  use the x and y coordinates of the gear part, but specify a higher z value
@@ -241,9 +247,13 @@ int main(int argc, char** argv) {
     ROS_INFO("done with first trajectory");
     //xxxxxxxxxxxxxxxxxx
 
-    // SECOND TRAJECTORY MOVEMENT- TOUCH TOP OF GEAR
-    //go to pose to touch top of gear part; same x and y, but lower z value for flange origin
-    flange_origin <<g_perceived_object_pose.pose.position.x + 0.08, g_perceived_object_pose.pose.position.y, 0.0; 
+    // SECOND TRAJECTORY MOVEMENT- MOVE THE ARM NEXT TO THE GEAR AND GET READY TO MOVE IT IN THE X-DIRECTION
+    if (goal_object_pose.pose.position.x <= g_perceived_object_pose.pose.position.x) {
+    	flange_origin << flange_origin(0) + 0.08, g_perceived_object_pose.pose.position.y, 0.0; 
+    }
+    else {
+    	flange_origin << flange_origin(0) - 0.08, g_perceived_object_pose.pose.position.y, 0.0;
+    }
     goal_flange_affine.translation() = flange_origin;
     ROS_INFO_STREAM("move to flange origin= " << goal_flange_affine.translation().transpose() << endl);
 
@@ -267,7 +277,12 @@ int main(int argc, char** argv) {
 
     // THIRD TRAJECTORY MOVEMENT- MOVE THE GEAR A CERTAIN DISTANCE IN THE X-DIRECTION, IN THIS CASE, MOVE IT 0.01 DISPLACEMENT
     //go to pose to touch top of gear part; same x and y, but lower z value for flange origin
-    flange_origin <<0.01+0.07, g_perceived_object_pose.pose.position.y, 0.0; 
+    if (goal_object_pose.pose.position.x <= g_perceived_object_pose.pose.position.x) {
+    	flange_origin << goal_object_pose.pose.position.x + 0.08, g_perceived_object_pose.pose.position.y, 0.0; 
+    }
+    else {
+    	flange_origin << goal_object_pose.pose.position.x - 0.08, g_perceived_object_pose.pose.position.y, 0.0; 
+    }
     goal_flange_affine.translation() = flange_origin;
     ROS_INFO_STREAM("move to flange origin= " << goal_flange_affine.translation().transpose() << endl);
 
@@ -287,16 +302,71 @@ int main(int argc, char** argv) {
     print_traj(new_trajectory);
     traj_publisher.publish(new_trajectory); //publish the trajectory
     ros::Duration(arrival_time).sleep(); //wait for the motion
-    ROS_INFO("done with second trajectory");
+    ROS_INFO("done with third trajectory");
 
+    object_finder_goal.object_name = g_object_name.c_str(); //convert string object to old C-style string data
+    object_finder_ac.sendGoal(object_finder_goal,&objectFinderDoneCb); //request object finding via action server
 
+    // FOURTH TRAJECTORY MOVEMENT- MOVE THE ARM NEXT TO THE GEAR AND GET READY TO MOVE IT IN THE Y-DIRECTION
+    if (goal_object_pose.pose.position.y <= g_perceived_object_pose.pose.position.y) {
+    	flange_origin << goal_object_pose.pose.position.x, g_perceived_object_pose.pose.position.y + 0.08, 0.5; 
+    }
+    else {
+    	flange_origin << goal_object_pose.pose.position.x, g_perceived_object_pose.pose.position.y - 0.08, 0.5;
+    }
+    goal_flange_affine.translation() = flange_origin;
+    ROS_INFO_STREAM("move to flange origin= " << goal_flange_affine.translation().transpose() << endl);
 
-    ros::Duration(3.0).sleep(); //dwell here to  observe contact
-    //xxxxxxxxxxxxxxxxxx
-/*
-    // THIRD ORIGINAL TRAJECTORY MOVEMENT- MOVE VERTICALLY UP, AWAY FROM GEAR
+    g_q_vec_arm_Xd = optimal_path.back(); //extract the last joint-space pose from the  plan, so can use it for start of next plan
+    // better would be to get resulting joint-space values from joint_states
+    //compute an optimal Cartesian motion in joint space from current joint-space pose to desired Cartesian pose
+    optimal_path.clear();
+    nsteps = 100; //tune me
+    //compute the plan, to be returned in optimal_path
+    if (!pCartTrajPlanner->plan_cartesian_path_w_rot_interp(g_q_vec_arm_Xd, goal_flange_affine,
+            nsteps, optimal_path)) {
+        ROS_WARN("no feasible IK path for specified Cartesian motion; quitting");
+        return 1;
+    }
+    //convert the path to a trajectory (adds joint-space names,  arrival times, etc)
+    pCartTrajPlanner->path_to_traj(optimal_path, arrival_time, new_trajectory);
+    print_traj(new_trajectory);
+    traj_publisher.publish(new_trajectory); //publish the trajectory
+    ros::Duration(arrival_time).sleep(); //wait for the motion
+    ROS_INFO("done with fourth trajectory");
+
+    // FIFTH TRAJECTORY MOVEMENT- MOVE THE GEAR A CERTAIN DISTANCE IN THE Y-DIRECTION, IN THIS CASE, MOVE IT 0.01 DISPLACEMENT
+    //go to pose to touch top of gear part; same x and y, but lower z value for flange origin
+    if (goal_object_pose.pose.position.y <= g_perceived_object_pose.pose.position.y) {
+    	flange_origin << goal_object_pose.pose.position.x, goal_object_pose.pose.position.y + 0.08, 0.0; 
+    }
+    else {
+    	flange_origin << goal_object_pose.pose.position.x, goal_object_pose.pose.position.y - 0.08, 0.0; 
+    }
+    goal_flange_affine.translation() = flange_origin;
+    ROS_INFO_STREAM("move to flange origin= " << goal_flange_affine.translation().transpose() << endl);
+
+    g_q_vec_arm_Xd = optimal_path.back(); //extract the last joint-space pose from the  plan, so can use it for start of next plan
+    // better would be to get resulting joint-space values from joint_states
+    //compute an optimal Cartesian motion in joint space from current joint-space pose to desired Cartesian pose
+    optimal_path.clear();
+    nsteps = 100; //tune me
+    //compute the plan, to be returned in optimal_path
+    if (!pCartTrajPlanner->plan_cartesian_path_w_rot_interp(g_q_vec_arm_Xd, goal_flange_affine,
+            nsteps, optimal_path)) {
+        ROS_WARN("no feasible IK path for specified Cartesian motion; quitting");
+        return 1;
+    }
+    //convert the path to a trajectory (adds joint-space names,  arrival times, etc)
+    pCartTrajPlanner->path_to_traj(optimal_path, arrival_time, new_trajectory);
+    print_traj(new_trajectory);
+    traj_publisher.publish(new_trajectory); //publish the trajectory
+    ros::Duration(arrival_time).sleep(); //wait for the motion
+    ROS_INFO("done with fifth trajectory");
+
+    // FINAL TRAJECTORY MOVEMENT- MOVE VERTICALLY UP, AWAY FROM GEAR
     //depart vertically: same x and y, but move to higher z value
-    flange_origin << g_perceived_object_pose.pose.position.x, g_perceived_object_pose.pose.position.y, 0.5;
+    flange_origin << flange_origin(0), flange_origin(1), 0.5;
     goal_flange_affine.translation() = flange_origin;
     ROS_INFO_STREAM("move to flange origin= " << goal_flange_affine.translation().transpose() << endl);
     g_q_vec_arm_Xd = optimal_path.back(); //start from the joint-space pose that ended the prior plan
@@ -316,7 +386,7 @@ int main(int argc, char** argv) {
     ros::Duration(arrival_time).sleep(); //wait for the motion
  
     ROS_INFO("done with last trajectory");
-*/
+
 }
 
 

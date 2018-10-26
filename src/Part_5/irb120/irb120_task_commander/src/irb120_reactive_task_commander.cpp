@@ -36,7 +36,7 @@ using namespace std; // avoids having to say: std::string, std::cout, etc
 std::vector<double> g_planner_joint_weights{3, 3, 2, 1, 1, 0.5}; //specify weights to use for planner optimization
 
 //another magic value: hard-coded name of object of interest
-string g_object_name("gear_part_ariac");  //hard-coded object name; edit this for different objects
+string g_object_name("gear_part");  //hard-coded object name; edit this for different objects
 int g_found_object_code; //global to communicate between callback and main: true if named object was found
 geometry_msgs::PoseStamped g_perceived_object_pose; //global to communicate between callback and main: pose  of found object
 
