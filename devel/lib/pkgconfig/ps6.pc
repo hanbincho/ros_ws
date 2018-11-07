@@ -1,0 +1,8 @@
+prefix=/home/hanbin/ros_ws/devel
+
+Name: ps6
+Description: Description of ps6
+Version: 0.0.0
+Cflags: -I/home/hanbin/ros_ws/src/ps6/include
+Libs: -L/home/hanbin/ros_ws/devel/lib 
+Requires: roscpp std_msgs std_srvs

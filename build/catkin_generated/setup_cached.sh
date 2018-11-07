@@ -7,4 +7,5 @@
 # new environment variables
 
 # modified environment variables
+export GAZEBO_MODEL_PATH="/opt/ros/kinetic/share/osrf_gear/models:$GAZEBO_MODEL_PATH"
 export PWD="/home/hanbin/ros_ws/build"

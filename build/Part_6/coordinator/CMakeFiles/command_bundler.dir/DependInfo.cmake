@@ -47,6 +47,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/python2.7"
   "/usr/include/libxml2"
   "/usr/include/tcl"
+  "/usr/include/ignition/math3"
+  "/usr/include/ignition/msgs0"
   )
 
 # Targets to which this target links.

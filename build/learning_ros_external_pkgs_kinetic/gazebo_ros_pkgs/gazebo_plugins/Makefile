@@ -271,6 +271,21 @@ gazebo_ros_template/fast:
 .PHONY : gazebo_ros_template/fast
 
 # Convenience name for target.
+learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/rule:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/rule
+.PHONY : learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/rule
+
+# Convenience name for target.
+gazebo_ros_vacuum_gripper: learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/rule
+
+.PHONY : gazebo_ros_vacuum_gripper
+
+# fast build rule for target.
+gazebo_ros_vacuum_gripper/fast:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/build.make learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/build
+.PHONY : gazebo_ros_vacuum_gripper/fast
+
+# Convenience name for target.
 learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_depth_camera.dir/rule:
 	cd /home/hanbin/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_depth_camera.dir/rule
 .PHONY : learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_depth_camera.dir/rule
@@ -871,6 +886,21 @@ gazebo_ros_multicamera/fast:
 .PHONY : gazebo_ros_multicamera/fast
 
 # Convenience name for target.
+learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/rule:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/rule
+.PHONY : learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/rule
+
+# Convenience name for target.
+gazebo_ros_harness: learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/rule
+
+.PHONY : gazebo_ros_harness
+
+# fast build rule for target.
+gazebo_ros_harness/fast:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/build.make learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/build
+.PHONY : gazebo_ros_harness/fast
+
+# Convenience name for target.
 learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_planar_move.dir/rule:
 	cd /home/hanbin/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_planar_move.dir/rule
 .PHONY : learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_planar_move.dir/rule
@@ -1004,21 +1034,6 @@ gazebo_ros_range: learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plug
 gazebo_ros_range/fast:
 	cd /home/hanbin/ros_ws/build && $(MAKE) -f learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_range.dir/build.make learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_range.dir/build
 .PHONY : gazebo_ros_range/fast
-
-# Convenience name for target.
-learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/rule:
-	cd /home/hanbin/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/rule
-.PHONY : learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/rule
-
-# Convenience name for target.
-gazebo_ros_vacuum_gripper: learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/rule
-
-.PHONY : gazebo_ros_vacuum_gripper
-
-# fast build rule for target.
-gazebo_ros_vacuum_gripper/fast:
-	cd /home/hanbin/ros_ws/build && $(MAKE) -f learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/build.make learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/build
-.PHONY : gazebo_ros_vacuum_gripper/fast
 
 src/MultiCameraPlugin.o: src/MultiCameraPlugin.cpp.o
 
@@ -1397,6 +1412,33 @@ src/gazebo_ros_hand_of_god.s: src/gazebo_ros_hand_of_god.cpp.s
 src/gazebo_ros_hand_of_god.cpp.s:
 	cd /home/hanbin/ros_ws/build && $(MAKE) -f learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_hand_of_god.dir/build.make learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_hand_of_god.dir/src/gazebo_ros_hand_of_god.cpp.s
 .PHONY : src/gazebo_ros_hand_of_god.cpp.s
+
+src/gazebo_ros_harness.o: src/gazebo_ros_harness.cpp.o
+
+.PHONY : src/gazebo_ros_harness.o
+
+# target to build an object file
+src/gazebo_ros_harness.cpp.o:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/build.make learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/src/gazebo_ros_harness.cpp.o
+.PHONY : src/gazebo_ros_harness.cpp.o
+
+src/gazebo_ros_harness.i: src/gazebo_ros_harness.cpp.i
+
+.PHONY : src/gazebo_ros_harness.i
+
+# target to preprocess a source file
+src/gazebo_ros_harness.cpp.i:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/build.make learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/src/gazebo_ros_harness.cpp.i
+.PHONY : src/gazebo_ros_harness.cpp.i
+
+src/gazebo_ros_harness.s: src/gazebo_ros_harness.cpp.s
+
+.PHONY : src/gazebo_ros_harness.s
+
+# target to generate assembly for a file
+src/gazebo_ros_harness.cpp.s:
+	cd /home/hanbin/ros_ws/build && $(MAKE) -f learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/build.make learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/src/gazebo_ros_harness.cpp.s
+.PHONY : src/gazebo_ros_harness.cpp.s
 
 src/gazebo_ros_imu.o: src/gazebo_ros_imu.cpp.o
 
@@ -2035,6 +2077,7 @@ help:
 	@echo "... run_tests_gazebo_plugins"
 	@echo "... set_model_state-test"
 	@echo "... gazebo_ros_template"
+	@echo "... gazebo_ros_vacuum_gripper"
 	@echo "... gazebo_ros_depth_camera"
 	@echo "... vision_reconfigure"
 	@echo "... camera_synchronizer"
@@ -2078,6 +2121,7 @@ help:
 	@echo "... gazebo_ros_force"
 	@echo "... gazebo_ros_joint_trajectory"
 	@echo "... gazebo_ros_multicamera"
+	@echo "... gazebo_ros_harness"
 	@echo "... gazebo_ros_planar_move"
 	@echo "... gazebo_ros_joint_state_publisher"
 	@echo "... rebuild_cache"
@@ -2088,7 +2132,6 @@ help:
 	@echo "... gazebo_ros_video"
 	@echo "... run_tests_gazebo_plugins_rostest"
 	@echo "... gazebo_ros_range"
-	@echo "... gazebo_ros_vacuum_gripper"
 	@echo "... src/MultiCameraPlugin.o"
 	@echo "... src/MultiCameraPlugin.i"
 	@echo "... src/MultiCameraPlugin.s"
@@ -2131,6 +2174,9 @@ help:
 	@echo "... src/gazebo_ros_hand_of_god.o"
 	@echo "... src/gazebo_ros_hand_of_god.i"
 	@echo "... src/gazebo_ros_hand_of_god.s"
+	@echo "... src/gazebo_ros_harness.o"
+	@echo "... src/gazebo_ros_harness.i"
+	@echo "... src/gazebo_ros_harness.s"
 	@echo "... src/gazebo_ros_imu.o"
 	@echo "... src/gazebo_ros_imu.i"
 	@echo "... src/gazebo_ros_imu.s"

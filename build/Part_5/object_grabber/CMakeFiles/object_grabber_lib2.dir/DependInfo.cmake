@@ -33,6 +33,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/hanbin/ros_ws/src/Part_3/object_manipulation_properties/include"
   "/opt/ros/kinetic/include"
   "/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+  "/usr/include/ignition/math3"
+  "/usr/include/ignition/msgs0"
   )
 
 # Targets to which this target links.

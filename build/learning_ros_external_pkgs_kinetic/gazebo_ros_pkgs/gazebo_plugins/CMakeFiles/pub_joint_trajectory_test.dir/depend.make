@@ -69,9 +69,10 @@ learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub
 learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/test/pub_joint_trajectory_test.cpp.o: /opt/ros/kinetic/include/trajectory_msgs/JointTrajectoryPoint.h
 learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/test/pub_joint_trajectory_test.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
 learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/test/pub_joint_trajectory_test.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
-learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/test/pub_joint_trajectory_test.cpp.o: /usr/include/ignition/math2/ignition/math/Angle.hh
-learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/test/pub_joint_trajectory_test.cpp.o: /usr/include/ignition/math2/ignition/math/Helpers.hh
-learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/test/pub_joint_trajectory_test.cpp.o: /usr/include/ignition/math2/ignition/math/IndexException.hh
-learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/test/pub_joint_trajectory_test.cpp.o: /usr/include/ignition/math2/ignition/math/Quaternion.hh
-learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/test/pub_joint_trajectory_test.cpp.o: /usr/include/ignition/math2/ignition/math/Vector3.hh
+learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/test/pub_joint_trajectory_test.cpp.o: /usr/include/ignition/math3/ignition/math/Angle.hh
+learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/test/pub_joint_trajectory_test.cpp.o: /usr/include/ignition/math3/ignition/math/Helpers.hh
+learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/test/pub_joint_trajectory_test.cpp.o: /usr/include/ignition/math3/ignition/math/Matrix3.hh
+learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/test/pub_joint_trajectory_test.cpp.o: /usr/include/ignition/math3/ignition/math/Quaternion.hh
+learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/test/pub_joint_trajectory_test.cpp.o: /usr/include/ignition/math3/ignition/math/System.hh
+learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/test/pub_joint_trajectory_test.cpp.o: /usr/include/ignition/math3/ignition/math/Vector3.hh
 

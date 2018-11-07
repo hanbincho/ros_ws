@@ -2441,6 +2441,32 @@ mobot_urdf_package/fast:
 .PHONY : mobot_urdf_package/fast
 
 #=============================================================================
+# Target rules for targets named ps6_package
+
+# Build rule for target.
+ps6_package: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ps6_package
+.PHONY : ps6_package
+
+# fast build rule for target.
+ps6_package/fast:
+	$(MAKE) -f ps6/CMakeFiles/ps6_package.dir/build.make ps6/CMakeFiles/ps6_package.dir/build
+.PHONY : ps6_package/fast
+
+#=============================================================================
+# Target rules for targets named ps6
+
+# Build rule for target.
+ps6: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ps6
+.PHONY : ps6
+
+# fast build rule for target.
+ps6/fast:
+	$(MAKE) -f ps6/CMakeFiles/ps6.dir/build.make ps6/CMakeFiles/ps6.dir/build
+.PHONY : ps6/fast
+
+#=============================================================================
 # Target rules for targets named sin_commander_client
 
 # Build rule for target.
@@ -8343,6 +8369,19 @@ gazebo_ros_template/fast:
 .PHONY : gazebo_ros_template/fast
 
 #=============================================================================
+# Target rules for targets named gazebo_ros_vacuum_gripper
+
+# Build rule for target.
+gazebo_ros_vacuum_gripper: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gazebo_ros_vacuum_gripper
+.PHONY : gazebo_ros_vacuum_gripper
+
+# fast build rule for target.
+gazebo_ros_vacuum_gripper/fast:
+	$(MAKE) -f learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/build.make learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/build
+.PHONY : gazebo_ros_vacuum_gripper/fast
+
+#=============================================================================
 # Target rules for targets named gazebo_ros_depth_camera
 
 # Build rule for target.
@@ -8863,6 +8902,19 @@ gazebo_ros_multicamera/fast:
 .PHONY : gazebo_ros_multicamera/fast
 
 #=============================================================================
+# Target rules for targets named gazebo_ros_harness
+
+# Build rule for target.
+gazebo_ros_harness: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gazebo_ros_harness
+.PHONY : gazebo_ros_harness
+
+# fast build rule for target.
+gazebo_ros_harness/fast:
+	$(MAKE) -f learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/build.make learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/build
+.PHONY : gazebo_ros_harness/fast
+
+#=============================================================================
 # Target rules for targets named gazebo_ros_planar_move
 
 # Build rule for target.
@@ -8978,19 +9030,6 @@ gazebo_ros_range: cmake_check_build_system
 gazebo_ros_range/fast:
 	$(MAKE) -f learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_range.dir/build.make learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_range.dir/build
 .PHONY : gazebo_ros_range/fast
-
-#=============================================================================
-# Target rules for targets named gazebo_ros_vacuum_gripper
-
-# Build rule for target.
-gazebo_ros_vacuum_gripper: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gazebo_ros_vacuum_gripper
-.PHONY : gazebo_ros_vacuum_gripper
-
-# fast build rule for target.
-gazebo_ros_vacuum_gripper/fast:
-	$(MAKE) -f learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/build.make learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/build
-.PHONY : gazebo_ros_vacuum_gripper/fast
 
 #=============================================================================
 # Target rules for targets named controller_manager_msgs_generate_messages_eus
@@ -13119,6 +13158,8 @@ help:
 	@echo "... mobot_nl_steering_package"
 	@echo "... mobot_nl_steering"
 	@echo "... mobot_urdf_package"
+	@echo "... ps6_package"
+	@echo "... ps6"
 	@echo "... sin_commander_client"
 	@echo "... sin_commander_service"
 	@echo "... _sin_commander_service_generate_messages_check_deps_SinCommanderMsg"
@@ -13573,6 +13614,7 @@ help:
 	@echo "... run_tests_gazebo_plugins"
 	@echo "... set_model_state-test"
 	@echo "... gazebo_ros_template"
+	@echo "... gazebo_ros_vacuum_gripper"
 	@echo "... gazebo_ros_depth_camera"
 	@echo "... vision_reconfigure"
 	@echo "... camera_synchronizer"
@@ -13613,6 +13655,7 @@ help:
 	@echo "... gazebo_ros_force"
 	@echo "... gazebo_ros_joint_trajectory"
 	@echo "... gazebo_ros_multicamera"
+	@echo "... gazebo_ros_harness"
 	@echo "... gazebo_ros_planar_move"
 	@echo "... gazebo_ros_joint_state_publisher"
 	@echo "... gazebo_ros_diff_drive"
@@ -13622,7 +13665,6 @@ help:
 	@echo "... gazebo_ros_video"
 	@echo "... run_tests_gazebo_plugins_rostest"
 	@echo "... gazebo_ros_range"
-	@echo "... gazebo_ros_vacuum_gripper"
 	@echo "... controller_manager_msgs_generate_messages_eus"
 	@echo "... controller_manager_msgs_generate_messages_nodejs"
 	@echo "... controller_manager_msgs_generate_messages_lisp"

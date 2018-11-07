@@ -481,6 +481,15 @@
 /home/hanbin/ros_ws/build/Part_2/mobot_urdf/CMakeFiles/test.dir
 /home/hanbin/ros_ws/build/Part_2/mobot_urdf/CMakeFiles/install/strip.dir
 /home/hanbin/ros_ws/build/Part_2/mobot_urdf/CMakeFiles/install/local.dir
+/home/hanbin/ros_ws/build/ps6/CMakeFiles/list_install_components.dir
+/home/hanbin/ros_ws/build/ps6/CMakeFiles/install.dir
+/home/hanbin/ros_ws/build/ps6/CMakeFiles/rebuild_cache.dir
+/home/hanbin/ros_ws/build/ps6/CMakeFiles/edit_cache.dir
+/home/hanbin/ros_ws/build/ps6/CMakeFiles/test.dir
+/home/hanbin/ros_ws/build/ps6/CMakeFiles/ps6_package.dir
+/home/hanbin/ros_ws/build/ps6/CMakeFiles/ps6.dir
+/home/hanbin/ros_ws/build/ps6/CMakeFiles/install/strip.dir
+/home/hanbin/ros_ws/build/ps6/CMakeFiles/install/local.dir
 /home/hanbin/ros_ws/build/Part_1/sin_commander_service/CMakeFiles/rebuild_cache.dir
 /home/hanbin/ros_ws/build/Part_1/sin_commander_service/CMakeFiles/edit_cache.dir
 /home/hanbin/ros_ws/build/Part_1/sin_commander_service/CMakeFiles/test.dir
@@ -1246,6 +1255,7 @@
 /home/hanbin/ros_ws/build/learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins.dir
 /home/hanbin/ros_ws/build/learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/set_model_state-test.dir
 /home/hanbin/ros_ws/build/learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_template.dir
+/home/hanbin/ros_ws/build/learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir
 /home/hanbin/ros_ws/build/learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_depth_camera.dir
 /home/hanbin/ros_ws/build/learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/vision_reconfigure.dir
 /home/hanbin/ros_ws/build/learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/camera_synchronizer.dir
@@ -1289,6 +1299,7 @@
 /home/hanbin/ros_ws/build/learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_force.dir
 /home/hanbin/ros_ws/build/learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_trajectory.dir
 /home/hanbin/ros_ws/build/learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_multicamera.dir
+/home/hanbin/ros_ws/build/learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir
 /home/hanbin/ros_ws/build/learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_planar_move.dir
 /home/hanbin/ros_ws/build/learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_state_publisher.dir
 /home/hanbin/ros_ws/build/learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/rebuild_cache.dir
@@ -1299,7 +1310,6 @@
 /home/hanbin/ros_ws/build/learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_video.dir
 /home/hanbin/ros_ws/build/learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest.dir
 /home/hanbin/ros_ws/build/learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_range.dir
-/home/hanbin/ros_ws/build/learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir
 /home/hanbin/ros_ws/build/learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_ros_control/CMakeFiles/install.dir
 /home/hanbin/ros_ws/build/learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_ros_control/CMakeFiles/rebuild_cache.dir
 /home/hanbin/ros_ws/build/learning_ros_external_pkgs_kinetic/gazebo_ros_pkgs/gazebo_ros_control/CMakeFiles/edit_cache.dir
